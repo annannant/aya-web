@@ -2,9 +2,6 @@ require('dotenv').config()
 const webpack = require('webpack')
 const withCSS = require('@zeit/next-css')
 const withSass = require('@zeit/next-sass')
-const path = require('path');
-
-console.log('----> path', __dirname);
 
 module.exports = withCSS(withSass({
   cssModules: true,
