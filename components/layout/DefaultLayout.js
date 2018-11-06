@@ -1,0 +1,37 @@
+import { Component } from 'react'
+
+import Head from './Head';
+import Footer from './Footer';
+import Header from './Header';
+
+class DefaultLayout extends Component {
+  constructor(props) {
+    super();
+  }
+
+  componentDidMount() {
+    require('static/assets/js/vendor/modernizr-3.5.0.min.js');
+    if (typeof window !== undefined) {
+      require('node_modules/owl.carousel/dist/owl.carousel.min.js');
+      require('static/assets/js/vendor/jquery-3.2.1.min.js');
+      require('static/assets/js/pooper.js');
+      require('static/assets/js/plugins.js');
+      require('static/assets/js/active.js');
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <Head />
+        <div className="wrapper" id="wrapper">
+          <Header />
+          {this.props.children}
+        </div>
+        <Footer />
+      </div>
+    )
+  }
+}
+
+export default DefaultLayout;

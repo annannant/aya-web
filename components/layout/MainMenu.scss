@@ -1,0 +1,32 @@
+.header__social {
+  li {
+    a>i:global(.bi) {
+      height: 100%;
+      width: 24px;
+      font-size: 25px;
+      padding-right: 25px;
+      line-height: 35px;
+      color: #111111
+    }
+    &:first-child {
+      padding-left: 0px;
+    }
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    li {
+      a>i:global(.bi) {
+        padding-right: 15px;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    li {
+      a>i:global(.bi) {
+        padding-right: 10px;
+      }
+    }
+  }
+}
