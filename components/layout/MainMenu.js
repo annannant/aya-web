@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link'
 
 import style from './MainMenu.scss';
 
@@ -11,9 +11,9 @@ class MainMenu extends Component {
 
   render() {
     return (
-      <div style={{ paddingLeft: 0, paddingRight: 0, maxWidth: '' }}>
+      <div style={{ paddingLeft: 0, paddingRight: 0 }}>
         <div className="row MainMenu">
-          <div className="col-md-6 col-sm-6 col-6 col-lg-2 text-center Logo">
+          <div className="col-md-6 col-sm-6 col-6 col-lg-2">
             <div className="logo">
               <Link href="/">
                 <a>
@@ -57,7 +57,7 @@ class MainMenu extends Component {
                 </Link>
               </li>
             </ul>
-            <div className={style.tel}>
+            <div className={`d-none d-lg-block ${style.tel}`}>
               <Link href="tel://+6621023593">
                 <a>
                   <span className={style.icon}><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /></span>

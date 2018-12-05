@@ -40,10 +40,6 @@ const Head = (props) => (
     {/* <!-- Stylesheets --> */}
     <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/static/assets/css/plugins.css" />
-    <link rel="stylesheet" href="/static/assets/css/style.css" />
-
-    {/* <!-- Cusom css -ww-> */}
-    <link rel="stylesheet" href="/static/assets/css/custom.css" />
 	
   </NextHead>
 )

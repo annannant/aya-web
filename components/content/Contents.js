@@ -3,8 +3,6 @@ import renderHTML from 'react-render-html';
 import YouTube from 'react-youtube';
 import NextHead from 'next/head';
 
-import style from './content.scss';
-
 export default class Contents extends Component {
   constructor() {
     super();
@@ -26,7 +24,7 @@ export default class Contents extends Component {
             height = '320';
           }
           content = (
-            <div className={`col-sm-12 text-center mt--40 ${style.nopadding}`}>
+            <div className={`col-sm-12 text-center mt--40 nopadding`}>
               <div className={`${size} col-xs-12`}>
                 <YouTube opts={{ width: '100%', height: height }} videoId={item.youtube_id} />
               </div>
@@ -35,8 +33,8 @@ export default class Contents extends Component {
           break;
         default:
           content = (
-            <div className={`col-lg-12 col-sm-12 ql-container ql-snow ${style.nopadding}`}>
-              <div className={`ql-editor ${style.nopadding}`}>
+            <div className={`col-lg-12 col-sm-12 ql-container ql-snow nopadding`}>
+              <div className={`ql-editor nopadding`}>
                 {renderHTML(item.text)}
               </div>
             </div>
@@ -58,7 +56,7 @@ export default class Contents extends Component {
         <section className="wn__product__area brown--color  pb--30">
           <div className="container">
             <div className="row">
-              <div className={`col-md-12 col-sm-12 ${style.nopadding}`}>
+              <div className={`col-md-12 col-sm-12 nopadding`}>
                 {contents}
               </div>
             </div>

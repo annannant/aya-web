@@ -4,6 +4,9 @@ import Head from './Head';
 import Footer from './Footer';
 import Header from './Header';
 
+// import './style.scss';
+import './DefaultLayout.scss';
+
 class DefaultLayout extends Component {
   constructor(props) {
     super();
