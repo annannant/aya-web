@@ -1,55 +1,73 @@
 import { Component } from 'react'
+import { observer, inject } from 'mobx-react';
+import { withRouter } from 'next/router'
+import renderHTML from 'react-render-html';
 import Link from 'next/link'
-import ContentHeader from './ContentHeader';
 
-export default class ContentDetail extends Component {
+import ContentHeader from './ContentHeader';
+import Contents from './Contents';
+
+import { datetime } from '../../src/utils/datetime';
+import { imageUrl } from '../../src/utils/url';
+
+import style from './content.scss';
+
+class ContentDetail extends Component {
   constructor() {
     super();
   }
-  
+
+  componentDidMount() {
+
+  }
+
   render() {
+    let { data } = this.props.content.toJS();
+    let items = data.contents;
     return (
       <div>
-        <ContentHeader />
-        <div className="page-blog-details pt--80 pb--45 bg--white">
+        <ContentHeader data={data} />
+        <div className="page-blog-details pt--60 pb--45 bg--white">
           <div className="container">
             <div className="row">
-              <div className="col-lg-9 col-12">
+              <div className="col-12">
                 <div className="blog-details content">
                   <article className="blog-post-details">
-                    <div className="post-thumbnail">
-                      <img src="/static/assets/images/portfolio/big-img/1.jpg" alt="portfolio images" />
-                    </div>
                     <div className="post_wrapper">
                       <div className="post_header">
-                        <h2>All you need right here</h2>
+                        <h1>{data.title}</h1>
                         <ul className="post_author">
-                          <li>Posts by : <a href="#">Hastech</a></li>
+                          <li>Posts by : <a href="#">{data.post_by ? data.post_by : 'AYA'}</a></li>
                           <li className="post-separator">/</li>
-                          <li>Mar 10 2018</li>
+                          <li>{datetime.moment().format('DD MMM YYYY')}</li>
                         </ul>
                       </div>
+                      {data.image_url &&
+                        <div className="post-thumbnail">
+                          <img src={imageUrl(data.image_url)} alt={data.title} />
+                        </div>
+                      }
                       <div className="post_content">
-                        <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+                        <Contents data={data} />
+                        {/* {renderHTML(data.content)} */}
                       </div>
-                      <ul className="blog_meta">
-                        {/* <li><a href="#">3 comments</a></li>
-                        <li> / </li> */}
+                      {/* <ul className="blog_meta">
+                        <li><a href="#">3 comments</a></li>
+                        <li> / </li>
                         <li>Tags:<span>fashion</span> <span>t-shirt</span> <span>white</span></li>
-                      </ul>
-                      <ul className="social__net--4 d-flex justify-content-start">
+                      </ul> */}
+                      {/* <ul className="social__net--4 d-flex justify-content-start" >
                         <li><a href="#"><i className="zmdi zmdi-rss" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-linkedin" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-vimeo" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-tumblr" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-google-plus" /></a></li>
-                      </ul>
+                      </ul> */}
                     </div>
                   </article>
                 </div>
               </div>
-              <div className="col-lg-3 col-12 md-mt-40 sm-mt-40">
+              <div style={{ display: 'none' }} className="col-lg-3 col-12 md-mt-40 sm-mt-40">
                 <div className="wn__sidebar">
                   {/* Start Single Widget */}
                   <aside className="widget search_widget">
@@ -136,3 +154,4 @@ export default class ContentDetail extends Component {
   }
 }
 
+export default inject('content')(observer(ContentDetail));

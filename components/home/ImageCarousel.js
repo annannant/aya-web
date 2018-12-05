@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import style from './ImageCarousel.scss';
 import Title from './Title';
 import { imageUrl } from '../../src/utils/url';
+import LinkType from './LinkType';
 
 export default class ImageCarousel extends Component {
   constructor() {
@@ -16,9 +17,11 @@ export default class ImageCarousel extends Component {
     let { data } = this.props;
     let images = (data.items || []).map((item, index) => {
       return (
-        <div key={index}>
-          <img src={imageUrl(item.image_url)} />
-        </div>
+        <LinkType key={index} type={item.link_type.value} to={item.link_to}>
+          <div>
+            <img src={imageUrl(item.image_url)} />
+          </div>
+        </LinkType>
       );
     });
     return (
@@ -27,7 +30,7 @@ export default class ImageCarousel extends Component {
           <link rel="stylesheet" href="/static/assets/css/plugins/carousel.min.css" />
         </NextHead>
         <section className="wn__product__area brown--color bg--white mt--40 pb--80">
-          <Title data={data} /> 
+          <Title data={data} />
           <div className={`container ${style.wrapper}`}>
             <div className="row">
               <div className="col-lg-12">

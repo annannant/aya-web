@@ -4,6 +4,7 @@ import Link from 'next/link';
 import style from './NewsList.scss';
 import Title from './Title';
 import { imageUrl } from '../../src/utils/url';
+import LinkType from './LinkType';
 
 export default class NewsList extends Component {
   constructor() {
@@ -17,18 +18,17 @@ export default class NewsList extends Component {
         <div key={index} className={`col-md-4 col-sm-12 ${style.item__box}`}>
           <div className="product product__style--3">
             <div className="product__thumb">
-              <Link href="/">
-                <a className="first__img"><img src={`${imageUrl(item.image_url)}`} alt={item.title} /></a>
-              </Link>
-              <Link href="/">
-                <a className="second__img animation1"><img src={`${imageUrl(item.image_url)}`} alt={item.title} /></a>
-              </Link>
+              <LinkType type={item.link_type.value} to={item.link_to}>
+                <img src={`${imageUrl(item.image_url)}`} alt={item.title} />
+              </LinkType>
               <div className={`${style.title__box}`}>{item.title}</div>
-              <div className="prize position__right__bottom d-flex">
-                <Link href="/">
-                  <a><strong>{item.link_title}</strong></a>
-                </Link>
-              </div>
+              {item.link_title &&
+                <div className="prize position__right__bottom d-flex">
+                  <LinkType type={item.link_type.value} to={item.link_to}>
+                    <strong>{item.link_title}</strong>
+                  </LinkType>
+                </div>
+              }
             </div>
           </div>
         </div>

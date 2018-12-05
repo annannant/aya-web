@@ -1,8 +1,5 @@
 import { Component, Fragment } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import Link from 'next/link'
-
-// import style from './FullScreenCarousel.scss';
 
 export default class FullScreenCarousel extends Component {
   constructor() {

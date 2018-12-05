@@ -519,6 +519,7 @@
     stroke: #444;
   }
 }
+
 .ql-snow {
   box-sizing: border-box;
 }
@@ -943,4 +944,15 @@
 
 .ql-snow .ql-editor  img {
   max-width: 860px;
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+  .ql-snow .ql-editor img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .ql-snow .ql-editor img {
+    width: 100%;
+  }
 }

@@ -1,5 +1,7 @@
 import home from './HomeStore'
+import content from './ContentStore'
 
 export default {
-  home
+  home,
+  content,
 }

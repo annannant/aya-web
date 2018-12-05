@@ -34,3 +34,22 @@
 .slider__content {
   margin-top: 0px;
 }
+
+
+/*===============================================================================
+      [ Content ]
+================================================================================= */
+.blog-details .blog-post-details .post-thumbnail > img {
+  width: 100%;
+}
+
+.blog-details .blog-post-details .post_wrapper .post_content p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.blog-details .blog-post-details .post_wrapper .post_header .post_author li {
+  font-size: 14px;
+  font-weight: 600;
+}

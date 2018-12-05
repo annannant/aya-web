@@ -11,7 +11,6 @@ class Index extends Component {
 
   render() {
     let home = this.props.home.toJS().data;
-
     return (
       <div>
         <DefaultLayout>

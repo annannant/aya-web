@@ -1,18 +1,26 @@
 import { Component } from 'react'
+import { imageUrl } from '../../src/utils/url';
+import style from './content.scss';
 
 export default class ContentHeader extends Component {
   render() {
+    let { data } = this.props;
+    data.header = (data.header || {});
+    if (!data.header.image_url) {
+      return <div className={`${style.no__header}`} />;
+    }
+
     return (
       <div>
-        <div className="ht__bradcaump__area bg-image--5">
+        <div className="ht__bradcaump__area" style={{ backgroundImage: `url(\'${imageUrl(data.header.image_url)}\')` }}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <div className="bradcaump__inner text-center">
-                  <h2 className="bradcaump-title">Portfolio Details</h2>
+                  <h2 className="bradcaump-title">{data.header.title}</h2>
                 </div>
               </div>
-            </div>
+            </div>3
           </div>
         </div>
       </div>

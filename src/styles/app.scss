@@ -1,5 +1,6 @@
 // @import '~/node_modules/@coreui//coreui/scss/coreui.scss';
-@import '~/node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import './font.scss';
 
 .nopadding {
   padding: 0px !important;

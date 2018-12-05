@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import { observer, inject } from 'mobx-react';
 import { withRouter } from 'next/router'
 
 import Link from 'next/link'
@@ -7,23 +8,24 @@ import Layout from 'components/layout/DefaultLayout';
 import ContentDetail from 'components/content/ContentDetail';
 import Error404 from 'components/error/Error404';
 
-export default withRouter(class Index extends Component {
-  constructor() {
-    super();
+class Content extends Component {
+  componentWillMount() {
+    const vid = this.props.router.query.v;
+    if (vid) {
+      this.props.content.getContentByViewId(vid);
+    }
   }
 
   render() {
-    const { router } = this.props;
-    console.log('----> router', router.query.id);
-    // if (!this.props.url.query.id) {
-    //   return <Error404 />
-    // }
+    const { content, router } = this.props;
     return (
       <div>
         <Layout>
-          <ContentDetail />
+          <ContentDetail content={content} router={router} />
         </Layout>
       </div>
     )
   }
-});
+}
+
+export default inject('content')(withRouter(observer(Content)));
