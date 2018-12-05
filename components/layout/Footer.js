@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import Link from 'next/link'
+
 import './Footer.scss';
 
 export default class Footer extends Component {
@@ -10,7 +12,7 @@ export default class Footer extends Component {
     return (
       <div>
         {/* Footer Area */}
-        <footer id="wn__footer" className="footer__area bg__cat--8 brown--color">
+        <footer id="wn__footer" className="footer__area bg__cat--8 brown--color mt--100">
           <div className="footer-static-top FooterWrapper">
             <div className="container">
               <div className="row">
@@ -24,11 +26,21 @@ export default class Footer extends Component {
                     </div>
                     <div className="footer__content">
                       <ul className="social__net social__net--2 d-flex justify-content-center">
-                        <li><a href="#"><i className="bi bi-facebook" /></a></li>
-                        {/* <li><a href="#"><i className="bi bi-google" /></a></li> */}
-                        <li><a href="#"><i className="bi bi-twitter" /></a></li>
-                        {/* <li><a href="#"><i className="bi bi-linkedin" /></a></li> */}
-                        <li><a href="#"><i className="bi bi-youtube" /></a></li>
+                        <li>
+                          <Link href="https://www.facebook.com/AYA.TeachingChinese/">
+                            <a target="_blank"><i className="bi bi-facebook" /></a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://www.facebook.com/AYA.TeachingChinese/">
+                            <a target="_blank"><i className="bi bi-twitter" /></a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="https://www.youtube.com/channel/UCVky4PrbWWDyC4hrYwVN64w">
+                            <a target="_blank"><i className="bi bi-youtube" /></a>
+                          </Link>
+                        </li>
                       </ul>
                       {/* <ul className="mainmenu d-flex justify-content-center">
                         <li><a href="index.html">Trending</a></li>
@@ -49,7 +61,7 @@ export default class Footer extends Component {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="copyright">
-                    <div className="copy__right__inner text-left">
+                    <div className="copy__right__inner text-center">
                       <p>Copyright <i className="fa fa-copyright" /> <a href="#">AYA Chinese.</a> All Rights Reserved</p>
                     </div>
                   </div>

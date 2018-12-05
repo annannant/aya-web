@@ -37,7 +37,7 @@ export default class ThreeColumn extends Component {
     });
     return (
       <Fragment>
-        <section className="wn__portfolio__area gallery__masonry__activation bg--white mt--40 mb--180">
+        <section className="wn__portfolio__area gallery__masonry__activation bg--white mt--60 pb--80">
           <Title data={data} />
           <div className="container">
             <div className="row masonry__wrap">

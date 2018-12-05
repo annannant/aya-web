@@ -10,7 +10,8 @@ const Head = (props) => (
     <meta charSet="UTF-8" />
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
-    <title>{props.title || ''}</title>
+    <title>{props.title || 'เรียนภาษาจีนกับเหล่าซืออายะ - AYA Chinese'}</title>
+    <meta name="author" content={props.author || 'AYA Chinese'}></meta>
     <meta name="description" content={props.description || defaultDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />

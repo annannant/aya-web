@@ -37,7 +37,7 @@ export default class NewsList extends Component {
 
     return (
       <Fragment>
-        <section className="wn__product__area brown--color bg--white mt--40 pb--80">
+        <section className="wn__product__area brown--color bg--white mt--60">
           <Title data={data} />
           <div className="container">
             <div className="border--round row">

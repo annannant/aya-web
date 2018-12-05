@@ -23,7 +23,10 @@ class DefaultLayout extends Component {
   render() {
     return (
       <div>
-        <Head />
+        <Head 
+          title="เรียนภาษาจีนกับเหล่าซืออายะ - AYA Chinese"
+          author="AYA Chinese"
+        />
         <div className="wrapper" id="wrapper">
           <Header />
           {this.props.children}

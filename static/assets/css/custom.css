@@ -3,10 +3,10 @@
 ================================================================================= */
 
 .logo {
-  width: 85px;
-  height: 85px;
-  padding-top: 10px;
-  margin: 0px 10px 0px 20px;
+  width: 82px;
+  /* height: 85px; */
+  padding-top: 0px;
+  /* margin: 0px 10px 0px 20px; */
   display: inline-block;
 }
 
@@ -14,8 +14,20 @@
   border-radius: 50px;
 }
 
+.header__absolute {
+  padding: 4vh 0 7vh;
+}
+
+.header__absolute.sticky__header.is-sticky {
+  padding: 0px;
+}
+
 .is-sticky .header__social li a > i.bi {
   color: #fff;
+}
+
+.header__absolute.sticky__header.is-sticky .MainMenu > .Logo {
+  display: none;
 }
 
 /*===============================================================================
@@ -25,6 +37,10 @@
 .ft__logo__img {
   width: 85px;
   border-radius: 50px;
+}
+
+.footer-static-top {
+  padding: 7vh 0 2vh;
 }
 
 /*===============================================================================

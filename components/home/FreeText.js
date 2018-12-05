@@ -55,7 +55,7 @@ export default class FreeText extends Component {
         <NextHead>
           <link rel="stylesheet" href="/static/assets/css/plugins/quill.snow.css" />
         </NextHead>
-        <section className="wn__product__area brown--color pt--80  pb--30">
+        <section className="wn__product__area brown--color mt--60  pb--30">
           <Title data={data} />
           <div className="container">
             <div className="row">

@@ -1,13 +1,17 @@
 .header__social {
   li {
-    a>i:global(.bi) {
-      height: 100%;
-      width: 24px;
-      font-size: 25px;
-      padding-right: 25px;
-      line-height: 35px;
-      color: #111111
-    }
+    // a>i:global(.bi) {
+    //   height: 100%;
+    //   width: 24px;
+    //   font-size: 25px;
+    //   padding-right: 25px;
+    //   line-height: 35px;
+    //   color: #111111
+    // }
+    // a>i:hover {
+    //   color: #d81f00;
+    // }
+    padding-right: 10px;
     &:first-child {
       padding-left: 0px;
     }
@@ -28,5 +32,29 @@
         padding-right: 10px;
       }
     }
+  }
+}
+
+.icon__social {
+  width: 24px;
+}
+
+.tel {
+  right: 14px;
+  position: absolute;
+  font-size: 12px;
+  bottom: -2px;
+  z-index: 9999;
+  a:hover,
+  a>svg:hover {
+    color: #ffffff;
+  }
+  .icon {
+    margin-right: 10px;
+    color: #62696f;
+  }
+  .number {
+    font-size: 14px;
+    letter-spacing: 1px;
   }
 }
