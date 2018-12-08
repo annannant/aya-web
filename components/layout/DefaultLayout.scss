@@ -1,3 +1,5 @@
 @import 'src/styles/app.scss';
 @import 'styles/style.scss';
-@import 'styles/custom.scss';
+:global {
+  @import 'styles/custom.scss';
+}

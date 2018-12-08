@@ -3,6 +3,7 @@ import { Component } from 'react'
 import BannerCarousel from 'components/home/BannerCarousel';
 import ThreeColumn from 'components/home/ThreeColumn';
 import ImageCarousel from 'components/home/ImageCarousel';
+import ImageHeader from 'components/home/ImageHeader';
 import NewsList from 'components/home/NewsList';
 import FreeText from 'components/home/FreeText';
 
@@ -22,6 +23,9 @@ export default class ContentList extends Component {
           break;
         case 'image-carousel':
           content = (<ImageCarousel data={item.data} {...this.props} />);
+          break;
+        case 'image-header':
+          content = (<ImageHeader data={item.data} {...this.props} />);
           break;
         case 'free-text':
           content = (<FreeText data={item.data} {...this.props} />);

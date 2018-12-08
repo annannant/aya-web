@@ -65,7 +65,7 @@ export default class Footer extends Component {
                     <li>
                       <Link href="https://www.facebook.com/AYA.TeachingChinese/">
                         <a target="_blank">
-                          <img src="/static/assets/images/icons/twitter.png" alt="aya twitter" className={style.icon__social} />
+                          <img src="/static/assets/images/icons/ig.png" alt="aya instagram" className={style.icon__social} />
                         </a>
                       </Link>
                     </li>

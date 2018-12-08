@@ -15,8 +15,6 @@ class Header extends Component {
           <div className="container" >
             <MainMenu />
             <MainMenuMobile />
-            <div className="mobile-menu d-block d-lg-none">
-            </div>
           </div>
         </header>
       </div>

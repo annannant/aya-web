@@ -55,11 +55,12 @@ export default class FreeText extends Component {
         <NextHead>
           <link rel="stylesheet" href="/static/assets/css/plugins/quill.snow.css" />
         </NextHead>
-        <section className="wn__product__area brown--color mt--60  pb--30">
+        <section className="wn__product__area brown--color pb--60 pt--60"
+          style={{ backgroundColor: (data.bg_color) ? data.bg_color : 'inherit' }} >
           <Title data={data} />
           <div className="container">
             <div className="row">
-              <div className="col-lg-12 col-sm-12" style={{ padding: 25 }}>
+              <div className="col-lg-12 col-sm-12 nopadding">
                 {contents}
               </div>
             </div>

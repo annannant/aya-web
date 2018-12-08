@@ -7,7 +7,7 @@ import ContentList from 'components/home/ContentList';
 class Index extends Component {
   componentDidMount() {
     this.props.home.resetData();
-    this.props.home.getData(process.env.HOME_ID);
+    this.props.home.getData(process.env.COURSE_ID);
   }
 
   render() {

@@ -2,8 +2,6 @@ import BaseStore from './BaseStore'
 import _ from 'lodash'
 import { http } from '../utils/http';
 
-const homeId = '5b9dec47c3960686838d8162';
-
 class HomeStore extends BaseStore {
   constructor() {
     super();
@@ -15,7 +13,11 @@ class HomeStore extends BaseStore {
     });
   }
 
-  async getHomeContent() {
+  async resetData() {
+    this.data = [];
+  }
+
+  async getData(homeId) {
     let url = `${process.env.CMS_API_URL}/v1/layouts/${homeId}`;
     let response = await http.get(url);
     if (response.statusCode === 200) {

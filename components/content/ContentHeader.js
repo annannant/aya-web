@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, Fragment } from 'react'
 import { imageUrl } from '../../src/utils/url';
 import style from './content.scss';
 
@@ -11,7 +11,7 @@ export default class ContentHeader extends Component {
     }
 
     return (
-      <div>
+      <Fragment>
         <div className="ht__bradcaump__area" style={{ backgroundImage: `url(\'${imageUrl(data.header.image_url)}\')` }}>
           <div className="container">
             <div className="row">
@@ -20,10 +20,10 @@ export default class ContentHeader extends Component {
                   <h2 className="bradcaump-title">{data.header.title}</h2>
                 </div>
               </div>
-            </div>3
+            </div>
           </div>
         </div>
-      </div>
+      </Fragment>
     )
   }
 }

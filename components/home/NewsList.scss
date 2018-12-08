@@ -1,3 +1,18 @@
+.title {
+  font-size: 12px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0px 12px;
+
+  background: #fff;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.07);
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  bottom: 11px;
+  right: 11px;
+}
+
 .item__box {
   font-family: 'Kanit', sans-serif;
   margin-top: 30px;

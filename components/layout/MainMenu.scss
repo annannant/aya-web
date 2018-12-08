@@ -1,3 +1,4 @@
+@import './styles/variables';
 .icon__social {
   width: 24px;
 }
@@ -65,18 +66,32 @@
   }
 }
 
+.mobile__logo {
+  z-index: 9999;
+}
+
+.icon {
+  margin-right: 5px;
+  padding-bottom: 2px;
+}
+
 :global {
+  .mean-container .mean-bar {
+    right: 0px;
+  }
+
   .header__area {
     .logo {
       text-align: center;
       width: 82px;
-      /* height: 85px; */
       padding-top: 0px;
-      /* margin: 0px 10px 0px 20px; */
-      display: inline-block;
+      float: left;
+      margin-right: 8vh;
+      z-index: 99999;
     }
     .logo img {
       border-radius: 50px;
+      box-shadow: 1px 1px 2px #444444;
     }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .logo {

@@ -29,11 +29,12 @@ export default class ImageCarousel extends Component {
         <NextHead>
           <link rel="stylesheet" href="/static/assets/css/plugins/carousel.min.css" />
         </NextHead>
-        <section className="wn__product__area brown--color bg--white mt--60">
+        <section className="wn__product__area brown--color bg--white pb--60 pt--60"
+          style={{ backgroundColor: (data.bg_color) ? data.bg_color : 'inherit' }} >
           <Title data={data} />
           <div className={`container ${style.wrapper}`}>
             <div className="row">
-              <div className="col-lg-12">
+              <div className="offset-lg-2 col-lg-8">
                 <Carousel showArrows showStatus={false} showThumbs={false} autoPlay stopOnHover>
                   {images}
                 </Carousel>
