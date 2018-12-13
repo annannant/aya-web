@@ -18,6 +18,7 @@ class HomeStore extends BaseStore {
   }
 
   async getData(homeId) {
+    this.loading = true;
     let url = `${process.env.CMS_API_URL}/v1/layouts/${homeId}`;
     let response = await http.get(url);
     if (response.statusCode === 200) {
@@ -27,6 +28,7 @@ class HomeStore extends BaseStore {
     } else {
       this.data = [];
     }
+    this.loading = false;
   }
 }
 export default new HomeStore();

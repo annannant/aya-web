@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, Fragment } from 'react'
 
 import Head from './Head';
 import Footer from './Footer';
@@ -25,7 +25,7 @@ class DefaultLayout extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Head 
           title="เรียนภาษาจีนกับเหล่าซืออายะ - AYA Chinese"
           author="AYA Chinese"
@@ -35,7 +35,7 @@ class DefaultLayout extends Component {
           {this.props.children}
         </div>
         <Footer />
-      </div>
+      </Fragment>
     )
   }
 }

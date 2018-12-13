@@ -1,8 +1,8 @@
 import { Component, Fragment } from 'react'
 import { imageUrl } from '../../src/utils/url';
-import style from './content.scss';
+import style from './contact.scss';
 
-export default class ContentHeader extends Component {
+export default class ContactHeader extends Component {
   render() {
     let { data } = this.props;
     data.header = (data.header || {});

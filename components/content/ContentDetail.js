@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { Component, Fragment } from 'react'
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'next/router'
 import renderHTML from 'react-render-html';
@@ -25,12 +25,12 @@ class ContentDetail extends Component {
     let { data } = this.props.content.toJS();
     let items = data.contents;
     return (
-      <div>
+      <Fragment>
         <ContentHeader data={data} />
         <div className="page-blog-details pt--60 pb--45 bg--white">
           <div className="container">
             <div className="row">
-              <div className="col-12">
+              <div className="col-12 nopadding">
                 <div className="blog-details content">
                   <article className="blog-post-details">
                     <div className="post_wrapper">
@@ -149,7 +149,7 @@ class ContentDetail extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </Fragment>
     )
   }
 }

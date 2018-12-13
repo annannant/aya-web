@@ -15,16 +15,16 @@ export default class ThreeColumn extends Component {
       return (
         <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-12 gallery__item cat--1">
           <div className="portfolio">
-            <LinkType type={item.link_type.value} to={item.link_to} >
               <div className="thumb">
-                <img src={imageUrl(item.thumb_url)} alt={item.title} />
+                <LinkType type={item.link_type.value} to={item.link_to} >
+                  <img src={imageUrl(item.thumb_url)} alt={item.title} />
+                </LinkType>
                 {item.image_url &&
                   <div className="search">
                     <a href={imageUrl(item.image_url)} data-lightbox="grportimg" data-title={item.title}><i className="zmdi zmdi-search" /></a>
                   </div>
                 }
               </div>
-            </LinkType>
             <div className="content">
               <h6>
                 <LinkType type={item.link_type.value} to={item.link_to} >

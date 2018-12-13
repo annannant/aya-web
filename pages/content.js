@@ -17,13 +17,28 @@ class Content extends Component {
   }
 
   render() {
-    const { content, router } = this.props;
-    return (
-      <div>
+    const router = this.props.router;
+
+    console.log('----> this.props', this.props);
+    // const content = this.props.content.toJS();
+    // const data = content.data;
+    // const loading = content.loading;
+    if (!router.query.v) {
+      return (
         <Layout>
-          <ContentDetail content={content} router={router} />
+          <Error404 />
         </Layout>
-      </div>
+      )
+    }
+
+    // if (!loading && !data.contents) {
+    //   return <Error404 />
+    // }
+
+    return (
+      <Layout>
+        <ContentDetail content={this.props.content} router={router} />
+      </Layout>
     )
   }
 }

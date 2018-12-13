@@ -9,29 +9,23 @@ export default class LinkType extends Component {
       case 'content':
         result = (
           <Link href={`/content?v=${to}`}>
-            <a target="_blank">
-              {this.props.children}
-            </a>
+            <a>{this.props.children}</a>
           </Link>
         );
         break;
       case 'url':
         result = (
           <Link href={to}>
-            <a target="_blank">
-              {this.props.children}
-            </a>
+            <a target="_blank">{this.props.children}</a>
           </Link>
         );
         break;
       case 'home':
         result = (
           <Link href="/">
-            <a>
-              {this.props.children}
-            </a>
+            <a>{this.props.children}</a>
           </Link>
-        ); 
+        );
         break;
       default:
         result = (
