@@ -1,13 +1,13 @@
 import { Component } from 'react'
 import { observer, inject } from 'mobx-react';
 
-import DefaultLayout from 'components/layout/DefaultLayout';
+import DefaultLayout from 'components/layouts/DefaultLayout';
 import ContentList from 'components/home/ContentList';
 
-class Index extends Component {
+class Universities extends Component {
   componentDidMount() {
     this.props.home.resetData();
-    this.props.home.getData(process.env.COURSE_ID);
+    this.props.home.getData(process.env.UNI_ID);
   }
 
   render() {
@@ -22,4 +22,4 @@ class Index extends Component {
   }
 }
 
-export default inject('home')(observer(Index));
+export default inject('home')(observer(Universities));

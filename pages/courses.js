@@ -1,14 +1,13 @@
 import { Component } from 'react'
 import { observer, inject } from 'mobx-react';
 
-import DefaultLayout from 'components/layout/DefaultLayout';
+import DefaultLayout from 'components/layouts/DefaultLayout';
 import ContentList from 'components/home/ContentList';
-import ContactPage from '../components/contact/ContactPage';
 
-class Index extends Component {
+class Courses extends Component {
   componentDidMount() {
-    // this.props.home.resetData();
-    // this.props.home.getData(process.env.REVIEW_ID);
+    this.props.home.resetData();
+    this.props.home.getData(process.env.COURSE_ID);
   }
 
   render() {
@@ -16,11 +15,11 @@ class Index extends Component {
     return (
       <div>
         <DefaultLayout>
-          <ContactPage />
+          <ContentList list={home.contents} />
         </DefaultLayout>
       </div>
     )
   }
 }
 
-export default inject('home')(observer(Index));
+export default inject('home')(observer(Courses));

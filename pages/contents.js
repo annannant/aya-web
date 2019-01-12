@@ -4,11 +4,11 @@ import { withRouter } from 'next/router'
 
 import Link from 'next/link'
 
-import Layout from 'components/layout/DefaultLayout';
-import ContentDetail from 'components/content/ContentDetail';
-import Error404 from 'components/error/Error404';
+import Layout from 'components/layouts/DefaultLayout';
+import ContentDetail from 'components/contents/ContentDetail';
+import Error404 from 'components/errors/Error404';
 
-class Content extends Component {
+class Contents extends Component {
   componentWillMount() {
     const vid = this.props.router.query.v;
     if (vid) {
@@ -43,4 +43,4 @@ class Content extends Component {
   }
 }
 
-export default inject('content')(withRouter(observer(Content)));
+export default inject('content')(withRouter(observer(Contents)));

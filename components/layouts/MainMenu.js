@@ -24,10 +24,10 @@ class MainMenu extends Component {
           <nav className="mainmenu__nav">
             <ul className="meninmenu d-flex justify-content-start">
               <li className="drop with--one--item"><Link href="/"><a>หน้าหลัก</a></Link></li>
-              <li className="drop with--one--item"><Link href="/course"><a>คอร์สเรียนภาษาจีน</a></Link></li>
-              <li className="drop with--one--item"><Link href="/university"><a>ข้อมูลมหาลัย</a></Link></li>
-              <li className="drop with--one--item"><Link href="/review"><a>รีวิว</a></Link></li>
-              <li className="drop with--one--item"><Link href="/contact"><a>ติดต่อเรา</a></Link></li>
+              <li className="drop with--one--item"><Link href="/courses"><a>คอร์สเรียนภาษาจีน</a></Link></li>
+              <li className="drop with--one--item"><Link href="/universities"><a>ข้อมูลมหาลัย</a></Link></li>
+              <li className="drop with--one--item"><Link href="/reviews"><a>รีวิว</a></Link></li>
+              <li className="drop with--one--item"><Link href="/contacts"><a>ติดต่อเรา</a></Link></li>
             </ul>
           </nav>
         </div>

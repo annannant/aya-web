@@ -8,7 +8,7 @@ export default class LinkType extends Component {
     switch (type) {
       case 'content':
         result = (
-          <Link href={`/content?v=${to}`}>
+          <Link href={`/contents?v=${to}`}>
             <a>{this.props.children}</a>
           </Link>
         );
