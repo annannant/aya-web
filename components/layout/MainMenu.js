@@ -27,7 +27,7 @@ class MainMenu extends Component {
               <li className="drop with--one--item"><Link href="/course"><a>คอร์สเรียนภาษาจีน</a></Link></li>
               <li className="drop with--one--item"><Link href="/university"><a>ข้อมูลมหาลัย</a></Link></li>
               <li className="drop with--one--item"><Link href="/review"><a>รีวิว</a></Link></li>
-              <li className="drop with--one--item"><Link href="/"><a>ติดต่อเรา</a></Link></li>
+              <li className="drop with--one--item"><Link href="/contact"><a>ติดต่อเรา</a></Link></li>
             </ul>
           </nav>
         </div>

@@ -3,7 +3,7 @@ import { observer, inject } from 'mobx-react';
 
 import DefaultLayout from 'components/layout/DefaultLayout';
 import ContentList from 'components/home/ContentList';
-import ContactPage from '../components/content/ContactPage';
+import ContactPage from '../components/contact/ContactPage';
 
 class Index extends Component {
   componentDidMount() {

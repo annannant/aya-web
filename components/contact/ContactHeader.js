@@ -6,12 +6,12 @@ export default class ContactHeader extends Component {
   render() {
     let { data } = this.props;
     data.header = (data.header || {});
-    if (!data.header.image_url) {
-      return <div className={`${style.no__header}`} />;
-    }
+    // if (!data.header.image_url) {
+    //   return <div className={`${style.no__header}`} />;
+    // }
 
     return (
-      <div className="ht__bradcaump__area" style={{ backgroundImage: `url(\'${imageUrl(data.header.image_url)}\')` }}>
+      <div className="ht__bradcaump__area bg-image--6" style={{ backgroundImage: `url(\'/static/assets/images/bg/6.jpg\')` }}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
