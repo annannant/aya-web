@@ -12,11 +12,6 @@ class MainMenu extends Component {
   render() {
     return (
       <div className="row menu">
-        <div className={`col-md-6 col-sm-6 col-6 d-block d-lg-none ${style.mobile__logo}`}>
-          <div className="logo">
-            <Link href="/"><a><img src="/static/assets/images/logo/logo.jpg" alt="logo aya chinese" /></a></Link>
-          </div>
-        </div>
         <div className="col-lg-10 d-none d-lg-block nopadding">
           <div className="logo">
             <Link href="/"><a><img src="/static/assets/images/logo/logo.jpg" alt="logo aya chinese" /></a></Link>
@@ -31,8 +26,8 @@ class MainMenu extends Component {
             </ul>
           </nav>
         </div>
-        <div className="col-md-6 col-sm-6 col-6 col-lg-2">
-          <ul className={`header__sidebar__right d-flex justify-content-end align-items-center header__social ${style.header__social}`}>
+        <div className="col-md-6 col-sm-6 col-6 col-lg-2 d-none d-lg-block">
+          {/* <ul className={`header__sidebar__right d-flex justify-content-end align-items-center header__social ${style.header__social}`}>
             <li>
               <Link href="https://www.facebook.com/AYA.TeachingChinese/">
                 <a target="_blank"><img src="/static/assets/images/icons/facebook.png" alt="aya facebook" className={style.icon__social} /></a>
@@ -48,11 +43,16 @@ class MainMenu extends Component {
                 <a target="_blank"><img src="/static/assets/images/icons/youtube.png" alt="aya youtube" className={style.icon__social} /></a>
               </Link>
             </li>
+          </ul> */}
+          <ul className="header__sidebar__right d-flex justify-content-end align-items-center">
+            <li className="fb" onClick={() => { window.open('https://www.facebook.com/AYA.TeachingChinese/') }}><a target="_blank" /></li>
+            <li className="ig" onClick={() => { window.open('https://www.facebook.com/AYA.TeachingChinese/') }}><a target="_blank" /></li>
+            <li className="youtube" onClick={() => { window.open('https://www.youtube.com/channel/UCVky4PrbWWDyC4hrYwVN64w') }}><a target="_blank" /></li>
           </ul>
-          <div className={`d-none d-lg-block ${style.tel}`}>
+          <div className={`d-none d-lg-block contact-tel ${style.tel}`}>
             <Link href="tel://+6621023593">
               <a>
-                <span className={style.icon}><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /></span>
+                {/* <span className={style.icon}><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /></span> */}
                 <span className={style.number}>02 - 102 3593</span>
               </a>
             </Link>

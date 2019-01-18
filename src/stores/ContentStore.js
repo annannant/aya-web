@@ -15,17 +15,19 @@ class ContentStore extends BaseStore {
     });
   }
 
-  async getContentByViewId(vid) {
+  async getContentByViewId(vid, preview) {
     try {
       this.loading = true;
-      let url = `${process.env.CMS_API_URL}/v1/contents/vid/${vid}`;
+      let query = (preview) ? '' : 'active=true';
+      let url = `${process.env.CMS_API_URL}/v1/contents/vid/${vid}?${query}`;
       let response = await http.get(url);
-      if (response.statusCode === 200) {
+      if (response.statusCode === 200 && response.body.data) {
         let data = response.body.data;
         delete data._id;
         this.data = data;
       } else {
         this.data = [];
+        window.location = '/';
       }
     } catch (err) {
       console.error(err);

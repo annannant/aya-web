@@ -1,0 +1,31 @@
+@import './styles/variables';
+
+:global(.header__area) {
+  .mobile__logo:global(.logo) {
+    z-index: 9999;
+    height: 110px;
+    padding-left: 25px;
+    width: 85px;
+    img.logo__img {
+      width: 100%;
+      line-height: 14vh;
+    }
+  }
+}
+
+.rigth__items {
+  position: absolute !important;
+  width: 80%;
+}
+
+.menu__mobile {
+  background-color: #ffffff;
+  .wrapper {
+    padding: 0px;
+  }
+}
+
+.sec__top {
+  height: 5px;
+  background-color: $main-color;
+}

@@ -1,4 +1,5 @@
 @import './styles/variables';
+
 .icon__social {
   width: 24px;
 }
@@ -7,11 +8,11 @@
   right: 14px;
   position: absolute;
   font-size: 12px;
-  bottom: -2px;
+  bottom: 1em;
   z-index: 9999;
   a:hover,
   a>svg:hover {
-    color: #ffffff;
+    color: $primary-font;
   }
   .icon {
     margin-right: 10px;
@@ -66,10 +67,6 @@
   }
 }
 
-.mobile__logo {
-  z-index: 9999;
-}
-
 .icon {
   margin-right: 5px;
   padding-bottom: 2px;
@@ -83,7 +80,7 @@
   .header__area {
     .logo {
       text-align: center;
-      width: 82px;
+      width: 75px;
       padding-top: 0px;
       float: left;
       margin-right: 8vh;
@@ -91,7 +88,7 @@
     }
     .logo img {
       border-radius: 50px;
-      box-shadow: 1px 1px 2px #444444;
+      // box-shadow: 1px 1px 2px #444444;
     }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .logo {

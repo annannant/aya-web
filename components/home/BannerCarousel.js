@@ -1,6 +1,10 @@
 import { Component, Fragment } from 'react'
-import $ from 'jquery';
+import NextHead from 'next/head'
 import Carousel from 'react-image-carousel';
+import { Carousel as ImageCarousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import $ from 'jquery';
 import { imageUrl } from '../../src/utils/url';
 
 export default class BannerCarousel extends Component {
@@ -52,12 +56,53 @@ export default class BannerCarousel extends Component {
         </div>
       )
     });
+    let mContents = (data.items || []).map((item, index) => {
+      return (
+        <div key={index}>
+          <img src={imageUrl(item.image_url)} />
+        </div>
+      );
+    });
+
     return (
       <Fragment>
-        <div className="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
-          {contents}
-        </div>
+        <Desktop contents={contents} />
+        <Mobile contents={mContents} {...this.props} />
       </Fragment>
     )
+  }
+}
+
+
+class Desktop extends Component {
+  render() {
+    return (
+      <div className="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme d-none d-lg-block">
+        {this.props.contents}
+      </div>
+    );
+  }
+}
+
+class Mobile extends Component {
+  render() {
+    return (
+      <Fragment>
+        <NextHead>
+          <link rel="stylesheet" href="/static/assets/css/plugins/carousel.min.css" />
+        </NextHead>
+        <section className="wn__product__area brown--color bg--white pb--0 pt--0 d-block d-lg-none">
+          <div className={`container`}>
+            <div className="row">
+              <div className="offset-lg-2 col-lg-8 nopadding">
+                <ImageCarousel showArrows showStatus={false} showThumbs={false} autoPlay stopOnHover>
+                  {this.props.contents}
+                </ImageCarousel>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Fragment>
+    );
   }
 }

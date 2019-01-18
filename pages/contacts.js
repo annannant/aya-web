@@ -1,9 +1,8 @@
 import { Component } from 'react'
 import { observer, inject } from 'mobx-react';
 
-import DefaultLayout from 'components/layouts/DefaultLayout';
-import ContentList from 'components/home/ContentList';
 import ContactPage from '../components/contacts/ContactPage';
+import DefaultLayout from '../components/layouts/DefaultLayout';
 
 class Contacts extends Component {
   componentDidMount() {

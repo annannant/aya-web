@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import NextHead from 'next/head'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import style from './ImageCarousel.scss';
+import css from './ImageCarousel.scss';
 import Title from './Title';
 import { imageUrl } from '../../src/utils/url';
 import LinkType from './LinkType';
@@ -32,7 +32,7 @@ export default class ImageCarousel extends Component {
         <section className="wn__product__area brown--color bg--white pb--60 pt--60"
           style={{ backgroundColor: (data.bg_color) ? data.bg_color : 'inherit' }} >
           <Title data={data} />
-          <div className={`container ${style.wrapper}`}>
+          <div className={`container ${css.wrapper}`}>
             <div className="row">
               <div className="offset-lg-2 col-lg-8">
                 <Carousel showArrows showStatus={false} showThumbs={false} autoPlay stopOnHover>

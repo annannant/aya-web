@@ -6,9 +6,9 @@ import Header from './Header';
 
 import './styles/Index.scss';
 import './styles/Plugins.scss';
-import './DefaultLayout.scss';
+import './ContentLayout.scss';
 
-class DefaultLayout extends Component {
+class ContentLayout extends Component {
   constructor(props) {
     super();
   }
@@ -31,7 +31,7 @@ class DefaultLayout extends Component {
           title="เรียนภาษาจีนกับเหล่าซืออายะ - AYA Chinese"
           author="AYA Chinese"
         />
-        <div className="wrapper" id="wrapper">
+        <div className="wrapper ContentLayout" id="wrapper">
           <Header />
           {this.props.children}
         </div>
@@ -41,4 +41,4 @@ class DefaultLayout extends Component {
   }
 }
 
-export default DefaultLayout;
+export default ContentLayout;

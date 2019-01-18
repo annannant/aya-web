@@ -1,0 +1,27 @@
+@import 'src/styles/utils.scss';
+:global {
+  .ContentLayout {
+    .mainmenu__nav .meninmenu li a {
+      color: #fff;
+    }
+    .mainmenu__nav .meninmenu li a:hover,
+    .mainmenu__nav .meninmenu li a:active,
+    .mainmenu__nav .meninmenu li a:visited {
+      color: #fff;
+    }
+    .header__area {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .bradcaump__inner .bradcaump-title {
+      margin-bottom: 25px;
+    }
+    .header__area .header__sidebar__right>li.fb>a,
+    .header__area .header__sidebar__right>li.ig>a,
+    .header__area .header__sidebar__right>li.youtube>a {
+      filter: invert(100%);
+    }
+    .contact-tel a>span {
+      color: #fff;
+    }
+  }
+}

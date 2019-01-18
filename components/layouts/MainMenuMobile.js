@@ -1,6 +1,9 @@
 import { Component } from 'react';
 import Link from 'next/link'
 
+import css from './MainMenuMobile.scss';
+import cssMain from './MainMenu.scss';
+
 class MainMenuMobile extends Component {
   constructor() {
     super();
@@ -8,9 +11,30 @@ class MainMenuMobile extends Component {
 
   render() {
     return (
-      <div className="row mobile-menu d-block d-lg-none mean-container">
-        <div className="col-lg-12 d-none">
-          <nav className="mobilemenu__nav">
+      <div className={`row ${css.menu__mobile}`}>
+        <div className={`col-sm-12 col-md-12 d-block d-lg-none nopadding ${css.sec__top}`}>
+          {/* <Link href="tel://+6621023593"><a><span className={css.number}>02 - 102 3593</span></a></Link> */}
+        </div>
+        <div className={`col-sm-12 col-md-12 d-block d-lg-none nopadding`}>
+          <div className={`${css.rigth__items}`}> 
+            <div className="row">
+              <div className="col-6">
+                <div className={`logo ${css.mobile__logo}`}>
+                  <Link href="/"><a><img className={`${css.logo__img}`} src="/static/assets/images/logo/logo.jpg" alt="logo aya chinese" /></a></Link>
+                </div>
+              </div>
+              <div className="col-6">
+                <ul className="header__sidebar__right d-flex justify-content-end align-items-center">
+                <li className="fb" onClick={() => { window.open('https://www.facebook.com/AYA.TeachingChinese/') }}><a target="_blank" /></li>
+            <li className="ig" onClick={() => { window.open('https://www.facebook.com/AYA.TeachingChinese/') }}><a target="_blank" /></li>
+            <li className="youtube" onClick={() => { window.open('https://www.youtube.com/channel/UCVky4PrbWWDyC4hrYwVN64w') }}><a target="_blank" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mobile-menu mean-container"></div>
+          <nav className="mobilemenu__nav d-none">
             <ul className="meninmenu">
               <li><Link href="/"><a>หน้าหลัก</a></Link></li>
               <li><Link href="/courses"><a>คอร์สเรียนภาษาจีน</a></Link></li>

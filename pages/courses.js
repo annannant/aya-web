@@ -1,8 +1,9 @@
 import { Component } from 'react'
 import { observer, inject } from 'mobx-react';
 
-import DefaultLayout from 'components/layouts/DefaultLayout';
+import ContentLayout from '../components/layouts/ContentLayout';
 import ContentList from 'components/home/ContentList';
+import DefaultLayout from '../components/layouts/DefaultLayout';
 
 class Courses extends Component {
   componentDidMount() {

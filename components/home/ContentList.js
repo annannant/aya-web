@@ -13,33 +13,29 @@ export default class ContentList extends Component {
       let content;
       switch (item.type) {
         case 'banner-carousel':
-          content = (<BannerCarousel data={item.data} {...this.props} />);
+          content = (<BannerCarousel key={index} data={item.data} {...this.props} />);
           break;
         case 'three-column':
-          content = (<ThreeColumn data={item.data} {...this.props} />);
+          content = (<ThreeColumn key={index} data={item.data} {...this.props} />);
           break;
         case 'news-list':
-          content = (<NewsList data={item.data} {...this.props} />);
+          content = (<NewsList key={index} data={item.data} {...this.props} />);
           break;
         case 'image-carousel':
-          content = (<ImageCarousel data={item.data} {...this.props} />);
+          content = (<ImageCarousel key={index} data={item.data} {...this.props} />);
           break;
         case 'image-header':
-          content = (<ImageHeader data={item.data} {...this.props} />);
+          content = (<ImageHeader key={index} data={item.data} {...this.props} />);
           break;
         case 'free-text':
-          content = (<FreeText data={item.data} {...this.props} />);
+          content = (<FreeText key={index} data={item.data} {...this.props} />);
           break;
         default:
           content = <div />;
           break;
       }
-      return (
-        <div key={index}>
-          {content}
-        </div>
-      );
+      return content;
     });
-    return (contents);
+    return contents;
   }
 }

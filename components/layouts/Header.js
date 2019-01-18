@@ -2,6 +2,7 @@ import { Component } from 'react'
 import MainMenu from './MainMenu';
 import MainMenuMobile from './MainMenuMobile';
 
+import css from './Header.scss';
 
 class Header extends Component {
   constructor(props) {
@@ -10,8 +11,8 @@ class Header extends Component {
 
   render() {
     return (
-      <header id="wn__header" className="header__area header__absolute">
-        <div className="container" >
+      <header id="wn__header" className={`header__area ${css.header__menu} ${this.props.classNames}`}>
+        <div className="container " >
           <MainMenu />
           <MainMenuMobile />
         </div>
