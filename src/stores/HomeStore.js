@@ -17,18 +17,23 @@ class HomeStore extends BaseStore {
     this.data = [];
   }
 
-  async getData(homeId) {
-    this.loading = true;
-    let url = `${process.env.CMS_API_URL}/v1/layouts/${homeId}`;
-    let response = await http.get(url);
-    if (response.statusCode === 200) {
-      let data = response.body.data;
-      delete data.data;
-      this.data = data;
-    } else {
-      this.data = [];
+  async getData(key) {
+    try {
+      this.loading = true;
+      let url = `${process.env.CMS_API_URL}/v1/layouts?key=${key}`;
+      let response = await http.get(url);
+      if (response.statusCode === 200) {
+        let data = response.body.data || [];
+        // delete data.data;
+        this.data = data;
+      } else {
+        this.data = [];
+      }
+    } catch (err) {
+      console.error('err', err);
+    } finally {
+      this.loading = false;
     }
-    this.loading = false;
   }
 }
 export default new HomeStore();

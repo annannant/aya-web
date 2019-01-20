@@ -6,13 +6,16 @@
   z-index: 9;
 }
 
+.header__menuspace {
+  position: relative;
+}
+
 @media (max-width: 991px) {
   .header__menu {
     left: 0;
     position: relative;
     right: 0;
     top: 0px;
-    z-index: 9;
-    // display: flex;
+    z-index: 9; // display: flex;
   }
 }

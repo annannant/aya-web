@@ -36,7 +36,20 @@ export default class BannerCarousel extends Component {
 
   render() {
     let { data } = this.props;
-    let contents = (data.items || []).map((item, index) => {
+    if (data.items.length < 1) return <div />;
+    return (
+      <Fragment>
+        <Desktop contents={data.items} />
+        <Mobile contents={data.items} {...this.props} />
+      </Fragment>
+    )
+  }
+}
+
+
+class Desktop extends Component {
+  render() {
+    let contents = (this.props.contents || []).map((item, index) => {
       return (
         <div key={index} className="slide animation__style08 bg-image--7 fullscreen align__center--left"
           style={{ backgroundImage: `url(\'${imageUrl(item.image_url)}\')` }} >
@@ -56,7 +69,18 @@ export default class BannerCarousel extends Component {
         </div>
       )
     });
-    let mContents = (data.items || []).map((item, index) => {
+
+    return (
+      <div className="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme d-none d-lg-block">
+        {contents}
+      </div>
+    );
+  }
+}
+
+class Mobile extends Component {
+  render() {
+    let contents = (this.props.contents || []).map((item, index) => {
       return (
         <div key={index}>
           <img src={imageUrl(item.image_url)} />
@@ -66,28 +90,6 @@ export default class BannerCarousel extends Component {
 
     return (
       <Fragment>
-        <Desktop contents={contents} />
-        <Mobile contents={mContents} {...this.props} />
-      </Fragment>
-    )
-  }
-}
-
-
-class Desktop extends Component {
-  render() {
-    return (
-      <div className="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme d-none d-lg-block">
-        {this.props.contents}
-      </div>
-    );
-  }
-}
-
-class Mobile extends Component {
-  render() {
-    return (
-      <Fragment>
         <NextHead>
           <link rel="stylesheet" href="/static/assets/css/plugins/carousel.min.css" />
         </NextHead>
@@ -95,9 +97,11 @@ class Mobile extends Component {
           <div className={`container`}>
             <div className="row">
               <div className="offset-lg-2 col-lg-8 nopadding">
-                <ImageCarousel showArrows showStatus={false} showThumbs={false} autoPlay stopOnHover>
-                  {this.props.contents}
-                </ImageCarousel>
+                {contents.length > 0 &&
+                  <ImageCarousel showArrows showStatus={false} showThumbs={false} autoPlay stopOnHover>
+                    {contents}
+                  </ImageCarousel>
+                }
               </div>
             </div>
           </div>

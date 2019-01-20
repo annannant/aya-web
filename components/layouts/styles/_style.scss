@@ -2202,7 +2202,9 @@ Header Styles
     background-size: 25px;
     padding-left: 25px;
     padding-right: 25px;
+    cursor: pointer;
   }
+
   .header__area .header__sidebar__right>li.ig>a {
     background: rgba(0, 0, 0, 0) url("/static/assets/images/icons/ig_.png") no-repeat scroll 0 center;
     height: 100%;
@@ -2211,14 +2213,24 @@ Header Styles
     background-size: 25px;
     padding-left: 25px;
     padding-right: 25px;
+    cursor: pointer;
   }
+
   .header__area .header__sidebar__right>li.youtube>a {
     background: rgba(0, 0, 0, 0) url("/static/assets/images/icons/youtube_.png") no-repeat scroll 0 center;
     height: 100%;
     line-height: 35px;
     width: 25px;
     background-size: 25px;
+    cursor: pointer;
   }
+
+  .header__area .header__sidebar__right>li.fb:hover>a,
+  .header__area .header__sidebar__right>li.ig:hover>a,
+  .header__area .header__sidebar__right>li.youtube:hover>a {
+    margin-bottom: 4px;
+  }
+
   .header__area .header__sidebar__right>li.shopcart>a {
     background: rgba(0, 0, 0, 0) url("/static/assets/images/icons/cart.png") no-repeat scroll 0 center;
     height: 100%;
@@ -2319,9 +2331,20 @@ Header Styles
     text-transform: uppercase;
     transition: all 0.4s ease 0s;
   }
-  .mainmenu__nav .meninmenu li a:hover {
-    color: $main-color;
+  .mainmenu__nav .meninmenu li a > div {
+    padding: 1px 10px;
   }
+
+  .mainmenu__nav .meninmenu li a:hover {
+    // color: $main-color;
+    // margin-bottom: 5px;
+  }
+  .mainmenu__nav .meninmenu li a:hover > div {
+    background-color: #3333335e;
+    color: #fff;
+    border-radius: 6px;
+  }
+
   .is-sticky .mainmenu__nav .meninmenu li a {
     color: $main-color;
   }
@@ -2338,7 +2361,7 @@ Header Styles
     background: transparent url("/static/assets/images/icons/icon_setting_white.png") no-repeat scroll left center;
   }
   .mainmenu__nav .meninmenu li:first-child a {
-    padding-left: 0;
+    // padding-left: 0;
   }
   .oth-page .mainmenu__nav .meninmenu li a {
     color: #fff;

@@ -1,1 +1,8 @@
 @import 'src/styles/utils.scss';
+
+:global {
+  .wrapper {
+    position: relative;
+    min-height: 35rem;
+  }
+}

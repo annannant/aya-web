@@ -11,13 +11,11 @@ class Contacts extends Component {
   }
 
   render() {
-    let home = this.props.home.toJS().data;
+    let home = this.props.home.toJS();
     return (
-      <div>
-        <DefaultLayout>
-          <ContactPage />
-        </DefaultLayout>
-      </div>
+      <DefaultLayout>
+        <ContactPage />
+      </DefaultLayout>
     )
   }
 }

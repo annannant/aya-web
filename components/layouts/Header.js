@@ -10,13 +10,15 @@ class Header extends Component {
   }
 
   render() {
+    let className = `header__area ${css.header__menu}`;
+    if (this.props.onTop === true) className += css.header__menuspace;
     return (
-      <header id="wn__header" className={`header__area ${css.header__menu} ${this.props.classNames}`}>
-        <div className="container " >
-          <MainMenu />
-          <MainMenuMobile />
-        </div>
-      </header>
+      <header id="wn__header" className={`${className}`} >
+      <div className="container " >
+        <MainMenu />
+        <MainMenuMobile />
+      </div>
+      </header >
     )
   }
 }

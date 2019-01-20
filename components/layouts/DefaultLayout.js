@@ -32,7 +32,7 @@ class DefaultLayout extends Component {
           author="AYA Chinese"
         />
         <div className="wrapper" id="wrapper">
-          <Header />
+          <Header {...this.props} />
           {this.props.children}
         </div>
         <Footer />

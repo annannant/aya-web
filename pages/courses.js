@@ -1,24 +1,24 @@
 import { Component } from 'react'
 import { observer, inject } from 'mobx-react';
 
-import ContentLayout from '../components/layouts/ContentLayout';
-import ContentList from 'components/home/ContentList';
+import ContentList from '../components/home/ContentList';
 import DefaultLayout from '../components/layouts/DefaultLayout';
+import Loader from '../components/commons/Loader';
 
 class Courses extends Component {
   componentDidMount() {
     this.props.home.resetData();
-    this.props.home.getData(process.env.COURSE_ID);
+    this.props.home.getData('courses');
   }
 
   render() {
-    let home = this.props.home.toJS().data;
+    let { data, loading } = this.props.home.toJS();
+    const main = data.main ? data.main : {};
     return (
-      <div>
-        <DefaultLayout>
-          <ContentList list={home.contents} />
-        </DefaultLayout>
-      </div>
+      <DefaultLayout onTop={main.ontop}>
+        <Loader loading={loading} />
+        <ContentList list={data.contents} />
+      </DefaultLayout>
     )
   }
 }
