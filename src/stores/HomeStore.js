@@ -1,6 +1,7 @@
 import BaseStore from './BaseStore'
 import _ from 'lodash'
 import { http } from '../utils/http';
+import { config } from '../config';
 
 class HomeStore extends BaseStore {
   constructor() {
@@ -20,7 +21,7 @@ class HomeStore extends BaseStore {
   async getData(key) {
     try {
       this.loading = true;
-      let url = `${process.env.CMS_API_URL}/v1/layouts?key=${key}`;
+      let url = `${config.api.cms}/v1/layouts?key=${key}`;
       let response = await http.get(url);
       if (response.statusCode === 200) {
         let data = response.body.data || [];

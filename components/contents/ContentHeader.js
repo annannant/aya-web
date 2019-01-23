@@ -7,7 +7,8 @@ export default class ContentHeader extends Component {
     let { data } = this.props;
     data.header = (data.header || {});
     if (!data.header.image_url) {
-      return <div className={`${style.no__header}`} />;
+      return <div />;
+      //  className={`${style.no__header}`} />;
     }
 
     return (

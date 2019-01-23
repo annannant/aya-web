@@ -1,3 +1,5 @@
+@import './styles/variables';
+
 .header__menu {
   left: 0;
   position: absolute;
@@ -8,6 +10,15 @@
 
 .header__menuspace {
   position: relative;
+  // background: $main-color;
+  :global {
+    .mainmenu__nav .meninmenu li a {
+      // color: #fff;
+    }
+    .row.menu {
+      // border-bottom: 1px solid #aaa;
+    }
+  }
 }
 
 @media (max-width: 991px) {

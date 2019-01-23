@@ -8,22 +8,31 @@ import ContentLayout from '../components/layouts/ContentLayout';
 import ContentDetail from 'components/contents/ContentDetail';
 import Error404 from 'components/errors/Error404';
 import DefaultLayout from '../components/layouts/DefaultLayout';
+import Loader from '../components/commons/Loader';
+import ContentNotFound from '../components/contents/ContentNotFound';
 
 class Contents extends Component {
-  componentWillMount() {
+  componentDidMount() {
+    this.getContent();
+  }
+
+  componentWillReceiveProps() {
+    this.getContent();
+  }
+
+  async getContent() {
     let { v, preview } = this.props.router.query;
+    console.log('v', v);
     preview = (preview === 'aya_admin!');
     if (v) {
-      this.props.content.getContentByViewId(v, preview);
+      await this.props.content.getContentByViewId(v, preview);
     }
   }
 
   render() {
     const router = this.props.router;
-    console.log('----> this.props', this.props);
-    // const content = this.props.content.toJS();
-    // const data = content.data;
-    // const loading = content.loading;
+    const content = this.props.content.toJS();
+    const { data, loading } = content;
     if (!router.query.v) {
       return (
         <DefaultLayout>
@@ -32,13 +41,14 @@ class Contents extends Component {
       )
     }
 
-    // if (!loading && !data.contents) {
-    //   return <Error404 />
-    // }
-
+    const ontop = !data.header.image_url ? true : false;
     return (
-      <DefaultLayout>
-        <ContentDetail content={this.props.content} router={router} />
+      <DefaultLayout onTop={ontop}>
+        <Loader loading={loading} />
+        {!loading && data.contents
+          ? <ContentDetail /> 
+          : <div />
+        }
       </DefaultLayout>
     )
   }
