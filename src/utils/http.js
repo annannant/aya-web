@@ -1,17 +1,18 @@
 import humps from 'humps';
 import request from 'then-request';
+import { config } from '../config';
 
 export class Http {
   constructor() {
     this.request = request;
   }
 
-  // setAuthorization(options) {
-  //   if (!options.headers) options.headers = {};
-  //   options.headers['Authorization'] = `Bearer ${config.api.token}`;
+  setAuthorization(options) {
+    if (!options.headers) options.headers = {};
+    options.headers['Authorization'] = `Bearer ${config.api.token}`;
 
-  //   return options;
-  // }
+    return options;
+  }
 
   parseBody(response) {
     if (response.body) response.body = JSON.parse(response.body);
@@ -19,27 +20,28 @@ export class Http {
   }
 
   async get(url, options = {}) {
+    options = this.setAuthorization(options);
+    options.json = humps.decamelizeKeys(options.json);
     let response = await this.request('GET', url, options);
     return this.parseBody(response);
   }
 
   async post(url, options = {}) {
-    console.log('----> options', options);
-    // options = this.setAuthorization(options);
-    // options.json = humps.decamelizeKeys(options.json);
+    options = this.setAuthorization(options);
+    options.json = humps.decamelizeKeys(options.json);
     let response = await this.request('POST', url, options);
     return this.parseBody(response);
   }
 
   async put(url, options = {}) {
-    // options = this.setAuthorization(options);
-    // options.json = humps.decamelizeKeys(options.json);
+    options = this.setAuthorization(options);
+    options.json = humps.decamelizeKeys(options.json);
     let response = await this.request('PUT', url, options);
     return this.parseBody(response);
   }
 
   async delete(url, options = {}) {
-    // options = this.setAuthorization(options);
+    options = this.setAuthorization(options);
     let response = await this.request('DELETE', url, options);
     return this.parseBody(response);
   }

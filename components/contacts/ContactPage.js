@@ -10,7 +10,7 @@ export default class ContactPage extends Component {
     return (
       <Fragment>
         <ContactHeader data={{}} />
-        <section className="wn_contact_area bg--white pt--80">
+        <section className="wn_contact_area bg--white pt--80 pb--80">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-12">
