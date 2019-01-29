@@ -20,7 +20,7 @@ class MainMenu extends Component {
             <ul className="meninmenu d-flex justify-content-start">
               <li className="drop with--one--item"><Link href="/"><a><div>หน้าหลัก</div></a></Link></li>
               <li className="drop with--one--item"><Link href="/courses"><a><div>คอร์สเรียนภาษาจีน</div></a></Link></li>
-              <li className="drop with--one--item"><Link href="/universities"><a><div>ข้อมูลมหาลัย</div></a></Link></li>
+              <li className="drop with--one--item"><Link href="/universities"><a><div>หลักสูตรเรียนต่อต่างประเทศ</div></a></Link></li>
               <li className="drop with--one--item"><Link href="/reviews"><a><div>รีวิว</div></a></Link></li>
               <li className="drop with--one--item"><Link href="/contacts"><a><div>ติดต่อเรา</div></a></Link></li>
             </ul>

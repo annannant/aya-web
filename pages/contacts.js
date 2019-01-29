@@ -13,7 +13,7 @@ class Contacts extends Component {
   render() {
     let home = this.props.home.toJS();
     return (
-      <DefaultLayout>
+      <DefaultLayout onTop={true}>
         <ContactPage />
       </DefaultLayout>
     )

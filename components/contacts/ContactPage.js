@@ -9,10 +9,11 @@ export default class ContactPage extends Component {
   render() {
     return (
       <Fragment>
-        <ContactHeader data={{}} />
-        <section className="wn_contact_area bg--white pt--80 pb--80">
+        {/* <ContactHeader data={{}} /> */}
+        {/* <section className="wn_contact_area bg--white pt--80 pb--80"> */}
+        <section className="wn_contact_area bg--white pt--40 pb--80">
           <div className="container">
-            <div className="row">
+            <div className="row" style={{ borderTop: '1px solid #868e96', paddingTop: '2.5em' }}>
               <div className="col-lg-8 col-12">
                 <div className="contact-form-wrap">
                   <h2 className="contact__title">แผนที่</h2>
@@ -26,7 +27,7 @@ export default class ContactPage extends Component {
               </div>
               <div className="col-lg-4 col-12 md-mt-40 sm-mt-40">
                 <div className="wn__address">
-                  <h2 className="contact__title">ติดต่อเรา</h2>
+                  <h2 className="contact__title">เกี่ยวกับเรา</h2>
                   <p>
                     สถาบันสอนภาษา AYA Chinese
                     รับสอนภาษาจี

@@ -13,9 +13,30 @@ export default class NewsList extends Component {
 
   render() {
     let { data } = this.props;
+    let colRows;
+    switch (data.rows) {
+      case 2:
+        colRows = 'col-lg-6 col-md-6 col-sm-6 col-6';
+        break;
+      case 3:
+        colRows = 'col-lg-4 col-md-6 col-sm-6 col-12';
+        break;
+      case 4:
+        colRows = 'col-lg-3 col-md-4 col-sm-6 col-12';
+        break;
+      case 6:
+        colRows = 'col-lg-2 col-md-2 col-sm-6 col-12';
+        break;
+      default:
+        colRows = 'col-lg-4 col-md-6 col-sm-6 col-12';  
+        break;
+    }
+    console.log('colRows', colRows);
+
+    data.items = data.items.concat(data.items);
     let contents = (data.items || []).map((item, index) => {
       return (
-        <div key={index} className={`col-md-4 col-sm-12 ${style.item__box}`}>
+        <div key={index} className={`${colRows} ${style.item__box}`}>
           <div className="product product__style--3">
             <div className="product__thumb">
               <LinkType type={item.link_type.value} to={item.link_to}>

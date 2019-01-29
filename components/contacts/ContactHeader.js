@@ -11,7 +11,10 @@ export default class ContactHeader extends Component {
     // }
 
     return (
-      <div className="ht__bradcaump__area bg-image--6" style={{ backgroundImage: `url(\'/static/assets/images/bg/6.jpg\')` }}>
+      <div className="ht__bradcaump__area bg-image--6"
+        style={{ position: 'relative' }}
+      // style={{ backgroundImage: `url(\'/static/assets/images/bg/6.jpg\')` }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

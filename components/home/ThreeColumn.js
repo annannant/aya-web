@@ -11,9 +11,28 @@ export default class ThreeColumn extends Component {
 
   render() {
     let { data } = this.props;
+    let colRows;
+    switch (data.rows) {
+      case 2:
+        colRows = 'col-lg-6 col-md-6 col-sm-6 col-6';
+        break;
+      case 3:
+        colRows = 'col-lg-4 col-md-6 col-sm-6 col-12';
+        break;
+      case 4:
+        colRows = 'col-lg-3 col-md-4 col-sm-6 col-12';
+        break;
+      case 6:
+        colRows = 'col-lg-2 col-md-2 col-sm-6 col-12';
+        break;
+      default:
+        colRows = 'col-lg-4 col-md-6 col-sm-6 col-12';  
+        break;
+    }
+
     let contents = (data.items || []).map((item, index) => {
       return (
-        <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-12 gallery__item cat--1">
+        <div key={index} className={`${colRows} gallery__item cat--1`}>
           <div className="portfolio">
             <div className="thumb">
               <LinkType type={item.link_type.value} to={item.link_to} >
@@ -26,12 +45,12 @@ export default class ThreeColumn extends Component {
               }
             </div>
             <div className="content">
-              <h6>
-                <LinkType type={item.link_type.value} to={item.link_to} >
+              <LinkType type={item.link_type.value} to={item.link_to} >
+                <h6>
                   {item.title}
-                </LinkType>
-              </h6>
-              <p>{item.desc}</p>
+                </h6>
+                <p>{item.desc}</p>
+              </LinkType>
             </div>
           </div>
         </div>
