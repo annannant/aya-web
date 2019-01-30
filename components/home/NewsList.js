@@ -31,9 +31,7 @@ export default class NewsList extends Component {
         colRows = 'col-lg-4 col-md-6 col-sm-6 col-12';  
         break;
     }
-    console.log('colRows', colRows);
 
-    data.items = data.items.concat(data.items);
     let contents = (data.items || []).map((item, index) => {
       return (
         <div key={index} className={`${colRows} ${style.item__box}`}>

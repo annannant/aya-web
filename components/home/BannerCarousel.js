@@ -52,7 +52,7 @@ class Desktop extends Component {
     let contents = (this.props.contents || []).map((item, index) => {
       return (
         <div key={index} className="slide animation__style08 bg-image--7 fullscreen align__center--left"
-          style={{ backgroundImage: `url(\'${imageUrl(item.image_url)}\')` }} >
+          style={{ backgroundImage: `url(\'${imageUrl(item.image_url)}\')`, backgroundColor: '#ffffff' }} >
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
