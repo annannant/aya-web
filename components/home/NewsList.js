@@ -5,6 +5,7 @@ import style from './NewsList.scss';
 import Title from './Title';
 import { imageUrl } from '../../src/utils/url';
 import LinkType from './LinkType';
+import Zoom from 'react-reveal/Zoom';
 
 export default class NewsList extends Component {
   constructor() {
@@ -28,31 +29,33 @@ export default class NewsList extends Component {
         colRows = 'col-lg-2 col-md-2 col-sm-6 col-12';
         break;
       default:
-        colRows = 'col-lg-4 col-md-6 col-sm-6 col-12';  
+        colRows = 'col-lg-4 col-md-6 col-sm-6 col-12';
         break;
     }
 
     let contents = (data.items || []).map((item, index) => {
       return (
-        <div key={index} className={`${colRows} ${style.item__box}`}>
-          <div className="product product__style--3">
-            <div className="product__thumb">
-              <LinkType type={item.link_type.value} to={item.link_to}>
-                <img src={`${imageUrl(item.image_url)}`} alt={item.title} />
-              </LinkType>
-              {item.title &&
-                <div className={`${style.title__box}`}>{item.title}</div>
-              }
-              {item.link_title &&
-                <div className={`position__right__bottom d-flex ${style.title}`}>
-                  <LinkType type={item.link_type.value} to={item.link_to}>
-                    <strong>{item.link_title}</strong>
-                  </LinkType>
-                </div>
-              }
+        <Zoom center key={index} >
+          <div className={`${colRows} ${style.item__box}`}>
+            <div className="product product__style--3">
+              <div className="product__thumb">
+                <LinkType type={item.link_type.value} to={item.link_to}>
+                  <img src={`${imageUrl(item.image_url)}`} alt={item.title} />
+                </LinkType>
+                {item.title &&
+                  <div className={`${style.title__box}`}>{item.title}</div>
+                }
+                {item.link_title &&
+                  <div className={`position__right__bottom d-flex ${style.title}`}>
+                    <LinkType type={item.link_type.value} to={item.link_to}>
+                      <strong>{item.link_title}</strong>
+                    </LinkType>
+                  </div>
+                }
+              </div>
             </div>
           </div>
-        </div>
+        </Zoom>
       )
     });
 

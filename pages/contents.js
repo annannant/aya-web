@@ -22,7 +22,6 @@ class Contents extends Component {
 
   async getContent() {
     let { v, preview } = this.props.router.query;
-    console.log('v', v);
     preview = (preview === 'aya_admin!');
     if (v) {
       await this.props.content.getContentByViewId(v, preview);

@@ -7,6 +7,7 @@ import css from './ImageHeader.scss';
 import Title from './Title';
 import { imageUrl } from '../../src/utils/url';
 import LinkType from './LinkType';
+import { Parallax, Background } from 'react-parallax';
 
 export default class ImageHeader extends Component {
   constructor() {
@@ -30,6 +31,16 @@ export default class ImageHeader extends Component {
             </div>
           </div>
         </div>
+        // <Parallax
+        //   // blur={10}
+        //   bgImage={imageUrl(item.image_url)}
+        //   bgImageAlt="the cat"
+        //   strength={400}
+        // >
+        //   Put some text content here - even an empty div with fixed dimensions to have a height
+        //   for the parallax.
+        //   <div style={{ height: '400px' }} />
+        // </Parallax>
       );
     });
     return (

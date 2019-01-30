@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Title from './Title';
 import { imageUrl } from '../../src/utils/url';
 import LinkType from './LinkType';
+import Slide from 'react-reveal/Slide';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 export default class ThreeColumn extends Component {
   constructor() {
@@ -32,28 +35,30 @@ export default class ThreeColumn extends Component {
 
     let contents = (data.items || []).map((item, index) => {
       return (
-        <div key={index} className={`${colRows} gallery__item cat--1`}>
-          <div className="portfolio">
-            <div className="thumb">
-              <LinkType type={item.link_type.value} to={item.link_to} >
-                <img src={imageUrl(item.thumb_url)} alt={item.title} />
-              </LinkType>
-              {item.image_url &&
-                <div className="search">
-                  <a href={imageUrl(item.image_url)} data-lightbox="grportimg" data-title={item.title}><i className="zmdi zmdi-search" /></a>
-                </div>
-              }
-            </div>
-            <div className="content">
-              <LinkType type={item.link_type.value} to={item.link_to} >
-                <h6>
-                  {item.title}
-                </h6>
-                <p>{item.desc}</p>
-              </LinkType>
+        <Zoom center key={index} >
+          <div className={`${colRows} gallery__item cat--1`}>
+            <div className="portfolio">
+              <div className="thumb">
+                <LinkType type={item.link_type.value} to={item.link_to} >
+                  <img src={imageUrl(item.thumb_url)} alt={item.title} />
+                </LinkType>
+                {item.image_url &&
+                  <div className="search">
+                    <a href={imageUrl(item.image_url)} data-lightbox="grportimg" data-title={item.title}><i className="zmdi zmdi-search" /></a>
+                  </div>
+                }
+              </div>
+              <div className="content">
+                <LinkType type={item.link_type.value} to={item.link_to} >
+                  <h6>
+                    {item.title}
+                  </h6>
+                  <p>{item.desc}</p>
+                </LinkType>
+              </div>
             </div>
           </div>
-        </div>
+        </Zoom>
       );
     });
     return (

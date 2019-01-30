@@ -30,7 +30,7 @@ class ContentDetail extends Component {
         <div className="page-blog-details pt--60 pb--45 bg--white">
           <div className="container">
             <div className="row">
-              <div className="col-12 nopadding">
+              <div className="col-12">
                 <div className="blog-details content">
                   <article className="blog-post-details">
                     <div className="post_wrapper">

@@ -34,7 +34,7 @@ export default class Contents extends Component {
         default:
           content = (
             <div className={`col-lg-12 col-sm-12 ql-container ql-snow nopadding`}>
-              <div className={`ql-editor nopadding`}>
+              <div className="ql-editor nopadding">
                 {renderHTML(item.text)}
               </div>
             </div>

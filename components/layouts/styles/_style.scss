@@ -2216,6 +2216,17 @@ Header Styles
     cursor: pointer;
   }
 
+  .header__area .header__sidebar__right>li.line>a {
+    background: rgba(0, 0, 0, 0) url("/static/assets/images/icons/line_48x48.png") no-repeat scroll 0 center;
+    height: 100%;
+    line-height: 35px;
+    width: 25px;
+    background-size: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+  }
+
   .header__area .header__sidebar__right>li.youtube>a {
     background: rgba(0, 0, 0, 0) url("/static/assets/images/icons/youtube_.png") no-repeat scroll 0 center;
     height: 100%;
@@ -2227,6 +2238,7 @@ Header Styles
 
   .header__area .header__sidebar__right>li.fb:hover>a,
   .header__area .header__sidebar__right>li.ig:hover>a,
+  .header__area .header__sidebar__right>li.line:hover>a,
   .header__area .header__sidebar__right>li.youtube:hover>a {
     margin-bottom: 4px;
   }
@@ -2611,6 +2623,13 @@ Header Styles
   }
   .bread__header.header__area .header__sidebar__right>li.ig>a {
     background: rgba(0, 0, 0, 0) url("/static/assets/images/icons/ig_.png") no-repeat scroll 100% center;
+    height: 100%;
+    line-height: 35px;
+    width: 25px;
+    background-size: 25px;
+  }
+  .bread__header.header__area .header__sidebar__right>li.line>a {
+    background: rgba(0, 0, 0, 0) url("/static/assets/images/icons/line_48x48.png") no-repeat scroll 100% center;
     height: 100%;
     line-height: 35px;
     width: 25px;

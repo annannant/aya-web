@@ -48,9 +48,9 @@ export default class Footer extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://www.facebook.com/AYA.TeachingChinese/">
+                    <Link href="https://line.me/ti/p/@ayachinese">
                       <a target="_blank">
-                        <img src="/static/assets/images/icons/ig.png" alt="aya instagram" className={style.icon__social} />
+                        <img src="/static/assets/images/icons/line.png" alt="aya instagram" className={style.icon__social} />
                       </a>
                     </Link>
                   </li>
@@ -58,6 +58,13 @@ export default class Footer extends Component {
                     <Link href="https://www.youtube.com/channel/UCVky4PrbWWDyC4hrYwVN64w">
                       <a target="_blank">
                         <img src="/static/assets/images/icons/youtube.png" alt="aya youtube" className={style.icon__social} />
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://www.instagram.com/ayachinese/">
+                      <a target="_blank">
+                        <img src="/static/assets/images/icons/ig.png" alt="aya instagram" className={style.icon__social} />
                       </a>
                     </Link>
                   </li>
