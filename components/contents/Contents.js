@@ -2,6 +2,7 @@ import { Component, Fragment } from 'react'
 import renderHTML from 'react-render-html';
 import YouTube from 'react-youtube';
 import NextHead from 'next/head';
+import ThreeColumn from '../home/ThreeColumn';
 
 export default class Contents extends Component {
   constructor() {
@@ -31,6 +32,12 @@ export default class Contents extends Component {
             </div>
           )
           break;
+
+        case 'three-column':
+          console.log('item.data', item.data);
+          content = <ThreeColumn key={index} data={item.data}/>
+          break;
+
         default:
           content = (
             <div className={`col-lg-12 col-sm-12 ql-container ql-snow nopadding`}>
