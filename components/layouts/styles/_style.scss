@@ -1,4 +1,6 @@
 @import 'variables';
+@import '../../../static//assets/css/animate.scss';
+
 :global {
   /*********************************************************************************
 
@@ -829,6 +831,12 @@ Helper Class
     margin-bottom: 180px;
   }
   /* spacing */
+  .pt--10 {
+    padding-top: 10px;
+  }
+  .pt--20 {
+    padding-top: 20px;
+  }
   .pt--30 {
     padding-top: 30px;
   }
@@ -2352,9 +2360,9 @@ Header Styles
     // margin-bottom: 5px;
   }
   .mainmenu__nav .meninmenu li a:hover > div {
-    background-color: #3333335e;
-    color: #fff;
-    border-radius: 3px;
+    border-bottom: 1px solid $main-color;
+    // -webkit-animation: 0.5s ease-in-out 0s normal both 1 running fadeInUp;
+    // animation: 0.5s ease-in-out 0s normal both 1 running fadeInUp;
   }
 
   .is-sticky .mainmenu__nav .meninmenu li a {

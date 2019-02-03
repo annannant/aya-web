@@ -18,7 +18,7 @@ export default class Footer extends Component {
               <div className={`col-xs-4 col-md-4 text-left ${style.desc__col}`}>
                 <div>
                   <h4 className={style.title}>
-                    สถาบันสอนภาษา AYA Chinese
+                    AYA CHINESE., LTD.
                   </h4>
                   <ol className={style.desc__list}>
                     <li>รับสอนภาษาจีนทุกระดับตั้งแต่พื้นฐาน </li>
@@ -31,8 +31,11 @@ export default class Footer extends Component {
               <div className={`col-xs-4 col-md-4 text-left ${style.desc__col}`}>
                 <div className={style.contact}>
                   <ul className={style.desc__list}>
-                    <li><FontAwesomeIcon icon="map-marker-alt" /> สถาบันสอนภาษา AYA Chinese ชั้น 16 อาคาร พญาไทพลาซ่า ติด BTS และ Airport Link พญาไท ทางออกที่ 1</li>
-                    <li><Link href="tel://+6621023593"><a><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /> 02 - 102 3593</a></Link></li>
+                    <li><FontAwesomeIcon icon="map-marker-alt" />บริษัท อายะ ไชนีส จำกัด ชั้น 16 อาคาร พญาไทพลาซ่า ติด BTS และ Airport Link พญาไท ทางออกที่ 1</li>
+                    <li style={{ letterSpacing: 1.2 }}>
+                      <Link href="tel://+6621023593"><a><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /> 02-102-3593</a></Link>,
+                      <Link href="tel://+66653264945"><a> 065-326-4945</a></Link>
+                    </li>
                     <li><FontAwesomeIcon icon="envelope" /> ayachinese@gmail.com</li>
                   </ul>
                 </div>
