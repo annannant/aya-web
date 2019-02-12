@@ -2,6 +2,7 @@ import { Component, Fragment } from 'react'
 import renderHTML from 'react-render-html';
 import YouTube from 'react-youtube';
 import NextHead from 'next/head'
+import ReactHtmlParser from 'react-html-parser';
 
 import Title from './Title';
 
@@ -29,6 +30,15 @@ export default class FreeText extends Component {
             <div className="col-sm-12 text-center pb--30">
               <div className={`${size} col-xs-12`}>
                 <YouTube opts={{ width: '100%', height: height }} videoId={item.youtube_id} />
+              </div>
+            </div>
+          )
+          break;
+        case 'ckeditor':
+          content = (
+            <div className="col-lg-12 col-sm-12 ql-container content-ckeditor">
+              <div className="">
+                {ReactHtmlParser(item.text)}
               </div>
             </div>
           )

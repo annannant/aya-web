@@ -16,4 +16,51 @@
   .ql-editor p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   }
+  .content-ckeditor td {
+    padding: 6px 10px 6px 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  .content-ckeditor table {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .content-ckeditor td,
+  .content-ckeditor th {
+    padding: 3px 10px;
+  }
+  .content-ckeditor {
+    padding: 20px;
+  }
+  .content-ckeditor .header {
+    color: #e92a2a;
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .content-ckeditor .sub-header {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .content-ckeditor .table {
+    overflow: scroll;
+  }
+  .content-ckeditor .table::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+    background: transparent;
+  }
+  .content-ckeditor .table::-webkit-scrollbar-thumb {
+    background: #e92a2a;
+    border-radius: 8px;
+  }
+  .content-ckeditor table[align="center"] {
+    margin: auto;
+  }
+  @media (max-width: 1024px) {
+    .content-ckeditor {
+      padding: 0px;
+    }
+  }
 }
