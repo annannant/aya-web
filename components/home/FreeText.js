@@ -43,7 +43,7 @@ export default class FreeText extends Component {
             </div>
           )
           break;
-        default:
+        case 'content':
           content = (
             <div className="col-lg-12 col-sm-12 ql-container ql-snow">
               <div className="ql-editor">
@@ -51,6 +51,8 @@ export default class FreeText extends Component {
               </div>
             </div>
           )
+          break;
+        default:
           break;
       }
       return (

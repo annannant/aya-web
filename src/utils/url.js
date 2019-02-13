@@ -13,3 +13,17 @@ export function imageUrl(path) {
     console.error(err);
   }
 }
+
+export function fileUrl(path) {
+  try {
+    if (!path) return '';
+    let header = path.slice(0, +config.files.path.length);
+    if (header === config.files.path) {
+      return `${config.files.url}/${path}`;
+    } else {
+      return path;
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}

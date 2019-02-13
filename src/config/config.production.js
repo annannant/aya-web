@@ -11,4 +11,8 @@ module.exports = {
     url: 'http://cms-api.ayachinese.com',
     path: 'public/images/uploads',
   },
+  files: {
+    url: 'http://cms-api.ayachinese.com',
+    path: 'public/files/uploads',
+  },
 };

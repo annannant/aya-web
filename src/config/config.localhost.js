@@ -11,4 +11,8 @@ module.exports = {
     url: 'http://localhost:9002',
     path: 'public/images/uploads',
   },
+  files: {
+    url: 'http://localhost:9002',
+    path: 'public/files/uploads',
+  },
 };
