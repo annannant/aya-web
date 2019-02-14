@@ -37,6 +37,8 @@ const Head = (props) => (
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Kanit:200,300,300i,400,400i,500,600,600i,700,700i,800|Prompt" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Quicksand:700,300|Montserrat" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Mitr:400,500" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:400,500" rel="stylesheet"></link>
     {/* <!-- Stylesheets --> */}
     <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/static/assets/css/plugins.css" />

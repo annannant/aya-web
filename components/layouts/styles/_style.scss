@@ -2212,7 +2212,7 @@ Header Styles
     width: 25px;
     background-size: 25px;
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 35px;
     cursor: pointer;
   }
 
@@ -2223,7 +2223,7 @@ Header Styles
     width: 25px;
     background-size: 25px;
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 35px;
     cursor: pointer;
   }
 
@@ -2234,7 +2234,7 @@ Header Styles
     width: 25px;
     background-size: 25px;
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 35px;
     cursor: pointer;
   }
 
@@ -2350,12 +2350,14 @@ Header Styles
     display: flex;
     font-size: 15px;
     font-weight: 600;
-    padding: 0 25px;
+    padding: 0 16px;
     text-transform: uppercase;
     transition: all 0.4s ease 0s;
   }
   .mainmenu__nav .meninmenu li a > div {
     padding: 1px 10px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 500;
   }
 
   .mainmenu__nav .meninmenu li a:hover {

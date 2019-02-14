@@ -17,8 +17,8 @@ class Header extends Component {
     return (
       <header id="wn__header" className={`${className}`} >
       <div className="container " >
-        <MainMenu />
         <MainMenuMobile />
+        <MainMenu />
       </div>
       </header >
     )

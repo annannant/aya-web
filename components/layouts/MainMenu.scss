@@ -1,6 +1,7 @@
 @import './styles/variables';
 
 .menu__box {
+  padding-top: 0.5rem;
   // border-bottom: 1px solid #3333332e;
 }
 
@@ -12,7 +13,7 @@
   right: 14px;
   position: absolute;
   font-size: 12px;
-  bottom: 1em;
+  bottom: 0.4em;
   z-index: 9999;
   a:hover,
   a>svg:hover {
