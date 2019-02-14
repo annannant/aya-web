@@ -28,7 +28,8 @@ class DefaultLayout extends Component {
     return (
       <Fragment>
         <Head 
-          title="เรียนภาษาจีนกับเหล่าซืออายะ - AYA Chinese"
+          // title={`${this.props.title || "เรียนภาษาจีนกับเหล่าซืออายะ"} | AYA Chinese`}
+          title={`เรียนภาษาจีนกับเหล่าซืออายะ | AYA Chinese`}
           author="AYA Chinese"
         />
         <div className="wrapper" id="wrapper">

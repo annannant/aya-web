@@ -28,7 +28,7 @@ class ContentLayout extends Component {
     return (
       <Fragment>
         <Head 
-          title="เรียนภาษาจีนกับเหล่าซืออายะ - AYA Chinese"
+          title="เรียนภาษาจีนกับเหล่าซืออายะ | AYA Chinese"
           author="AYA Chinese"
         />
         <div className="wrapper ContentLayout" id="wrapper">

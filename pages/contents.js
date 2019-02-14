@@ -3,6 +3,8 @@ import { observer, inject } from 'mobx-react';
 import { withRouter } from 'next/router'
 
 import Link from 'next/link'
+import { Helmet } from "react-helmet";
+import NextHead from 'next/head'
 
 import ContentLayout from '../components/layouts/ContentLayout';
 import ContentDetail from 'components/contents/ContentDetail';
@@ -10,9 +12,12 @@ import Error404 from 'components/errors/Error404';
 import DefaultLayout from '../components/layouts/DefaultLayout';
 import Loader from '../components/commons/Loader';
 import ContentNotFound from '../components/contents/ContentNotFound';
+import ga from '../src/utils/ga';
 
 class Contents extends Component {
   componentDidMount() {
+    const { data } = this.props.content.toJS();
+    ga.view(`/${data.header.title}`);
     this.getContent();
   }
 
@@ -43,9 +48,12 @@ class Contents extends Component {
     const ontop = !data.header.image_url ? true : false;
     return (
       <DefaultLayout onTop={ontop}>
+        <NextHead>
+          <title>{data.header.title} | AYA Chinese</title>
+        </NextHead>
         <Loader loading={loading} />
         {!loading && data.contents
-          ? <ContentDetail /> 
+          ? <ContentDetail />
           : <div />
         }
       </DefaultLayout>

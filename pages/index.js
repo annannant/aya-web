@@ -4,11 +4,13 @@ import { observer, inject } from 'mobx-react';
 import ContentList from '../components/home/ContentList';
 import DefaultLayout from '../components/layouts/DefaultLayout';
 import Loader from '../components/commons/Loader';
+import ga from '../src/utils/ga';
 
 class Index extends Component {
   componentDidMount() {
     this.props.home.resetData();
     this.props.home.getData('home');
+    ga.view('homepage');
   }
 
   render() {

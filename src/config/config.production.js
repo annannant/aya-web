@@ -15,4 +15,7 @@ module.exports = {
     url: 'http://cms-api.ayachinese.com',
     path: 'public/files/uploads',
   },
+  google: {
+    analytics: 'UA-134492358-1',
+  },
 };

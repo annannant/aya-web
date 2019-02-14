@@ -15,4 +15,7 @@ module.exports = {
     url: 'http://localhost:9002',
     path: 'public/files/uploads',
   },
+  google: {
+    analytics: 'UA-134492358-1',
+  },
 };
