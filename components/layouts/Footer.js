@@ -15,25 +15,25 @@ export default class Footer extends Component {
         <div className="footer-static-top FooterWrapper">
           <div className="container">
             <div className="row">
-              {/* <div className={`col-xs-4 col-md-4 text-left ${style.desc__col}`}>
+              <div className={`col-xs-4 col-md-4 text-left ${style.desc__col}`}>
                 <div>
                   <h4 className={style.title}>
                     AYA CHINESE., LTD.
                   </h4>
-                  <ol className={style.desc__list}>
+                  {/* <ol className={style.desc__list}>
                     <li>รับสอนภาษาจีนทุกระดับตั้งแต่พื้นฐาน </li>
                     <li>ให้คำปรึกษาและข้อมูลในการศึกษาต่อประเทศจีน </li>
                     <li>รับติดต่อสถาบัน จัดหาที่เรียน ดำเนินการสมัตรเรียนในทุกระดับ</li>
-                  </ol>
+                  </ol> */}
                 </div>
-              </div> */}
+              </div>
 
-              <div className={`offset-md-4 col-xs-4 col-md-4 text-left ${style.desc__col}`}>
-                <div className="text-center mb--10">
+              <div className={`col-xs-4 col-md-4 text-left ${style.desc__col}`}>
+                {/* <div className="text-center mb--10">
                   <h4 className={style.title}>
                     AYA CHINESE., LTD.
                   </h4>
-                </div>
+                </div> */}
                 <div className={style.contact}>
                   <ul className={style.desc__list}>
                     <li><FontAwesomeIcon icon="map-marker-alt" />บริษัท อายะ ไชนีส จำกัด ชั้น 16 อาคาร พญาไทพลาซ่า ติด BTS และ Airport Link พญาไท ทางออกที่ 1</li>
@@ -46,7 +46,7 @@ export default class Footer extends Component {
                 </div>
               </div>
 
-              <div className={`col-xs-12 col-md-12 text-center`}>
+              <div className={`col-xs-4 col-md-4 text-center`}>
                 <ul className={`social__net social__net--2 d-flex ${style.social__net}`}>
                   <li>
                     <Link href="https://www.facebook.com/AYA.TeachingChinese/">

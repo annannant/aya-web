@@ -13,7 +13,7 @@ export default class ContactPage extends Component {
         {/* <section className="wn_contact_area bg--white pt--80 pb--80"> */}
         <section className="wn_contact_area bg--white pb--100">
           <div className="container">
-            <div className="row" style={{ borderTop: '1px solid #868e96', paddingTop: '2.8em' }}>
+            <div className="row" style={{ borderTop: '1px solid #ddd', paddingTop: '2.8em' }}>
               <div className="col-lg-8 col-12">
                 <div className="contact-form-wrap">
                   <h2 className="contact__title">แผนที่</h2>
@@ -28,10 +28,10 @@ export default class ContactPage extends Component {
               <div className="col-lg-4 col-12 md-mt-40 sm-mt-40">
                 <div className="wn__address">
                   <h2 className="contact__title">AYA CHINESE., LTD.</h2>
-                  <p>
+                  {/* <p>
                     บริษัท อายะ ไชนีส
                     รับสอนภาษาจีน จัดหาที่เรียน ดำเนินการสมัครเรียนในทุกระดับ
-                  </p>
+                  </p> */}
                   <div className="wn__addres__wreapper">
                     <div className="single__address">
                       <i className="icon-location-pin icons" />
