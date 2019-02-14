@@ -58,9 +58,9 @@ class Desktop extends Component {
               <div className="col-lg-12">
                 <div className="slider__content">
                   <div className="contentbox">
-                    <h2>{item.text1}<span>{item.text1_color}</span></h2>
-                    <h2>{item.text2}<span>{item.text2_color}</span></h2>
-                    <h2>{item.text3}<span>{item.text3_color}</span></h2>
+                    <h2 style={{ color: (item.first_color || '#3c3c3c' )}}>{item.text1}<span style={{color: (item.second_color || '#d81f00' )}}>{item.text1_color}</span></h2>
+                    <h2 style={{ color: (item.first_color || '#3c3c3c' )}}>{item.text2}<span style={{color: (item.second_color || '#d81f00' )}}>{item.text2_color}</span></h2>
+                    <h2 style={{ color: (item.first_color || '#3c3c3c' )}}>{item.text3}<span style={{color: (item.second_color || '#d81f00' )}}>{item.text3_color}</span></h2>
                   </div>
                 </div>
               </div>
