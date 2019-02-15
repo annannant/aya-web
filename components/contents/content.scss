@@ -16,6 +16,10 @@
   .ql-editor p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   }
+  .content-ckeditor.ql-container {
+    overflow: scroll;
+    white-space: pre-wrap;
+  }
   .content-ckeditor td {
     padding: 6px 10px 6px 10px;
     border-top: 1px solid #ccc;
@@ -46,10 +50,12 @@
   .content-ckeditor .table {
     overflow: scroll;
   }
-  .content-ckeditor .table::-webkit-scrollbar {
+  .content-ckeditor .table::-webkit-scrollbar,
+  .content-ckeditor.ql-container::-webkit-scrollbar {
     width: 0px;
     height: 10px;
     background: transparent;
+    -webkit-overflow-scrolling: touch;
   }
   .content-ckeditor .table::-webkit-scrollbar-thumb {
     background: #e92a2a;
@@ -58,16 +64,13 @@
   .content-ckeditor table[align="center"] {
     margin: auto;
   }
-
   .pdf-content .pdf-icon {
     text-align: center;
   }
-  
   .pdf-content .pdf-icon img {
     max-width: 70px;
     padding-top: 30px;
   }
-
   @media (max-width: 1024px) {
     .content-ckeditor {
       padding: 0px;

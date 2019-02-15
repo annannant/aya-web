@@ -10,8 +10,6 @@ import Contents from './Contents';
 import { datetime } from '../../src/utils/datetime';
 import { imageUrl } from '../../src/utils/url';
 
-import style from './content.scss';
-
 class ContentDetail extends Component {
   constructor() {
     super();
@@ -27,13 +25,14 @@ class ContentDetail extends Component {
     return (
       <Fragment>
         <ContentHeader data={data} />
-        <div className="page-blog-details pt--60 pb--45 bg--white">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="blog-details content">
-                  <article className="blog-post-details">
-                    <div className="post_wrapper">
+        <div className={`page-blog-details pb--45 bg--white`}>
+          {/* <div className="container"> */}
+          <div className="row">
+            <div className="col-12">
+              <div className="blog-details content">
+                <article className="blog-post-details">
+                  <div className="post_wrapper">
+                    <div className="container">
                       <div className="post_header">
                         <h1>{data.title}</h1>
                         <ul className="post_author">
@@ -47,26 +46,27 @@ class ContentDetail extends Component {
                           <img src={imageUrl(data.image_url)} alt={data.title} />
                         </div>
                       }
-                      <div className="post_content">
-                        <Contents data={data} />
-                        {/* {renderHTML(data.content)} */}
-                      </div>
-                      {/* <ul className="blog_meta">
+                    </div>
+                    <div className="post_content">
+                      <Contents data={data} />
+                      {/* {renderHTML(data.content)} */}
+                    </div>
+                    {/* <ul className="blog_meta">
                         <li><a href="#">3 comments</a></li>
                         <li> / </li>
                         <li>Tags:<span>fashion</span> <span>t-shirt</span> <span>white</span></li>
                       </ul> */}
-                      {/* <ul className="social__net--4 d-flex justify-content-start" >
+                    {/* <ul className="social__net--4 d-flex justify-content-start" >
                         <li><a href="#"><i className="zmdi zmdi-rss" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-linkedin" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-vimeo" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-tumblr" /></a></li>
                         <li><a href="#"><i className="zmdi zmdi-google-plus" /></a></li>
                       </ul> */}
-                    </div>
-                  </article>
-                </div>
+                  </div>
+                </article>
               </div>
+              {/* </div> */}
               <div style={{ display: 'none' }} className="col-lg-3 col-12 md-mt-40 sm-mt-40">
                 <div className="wn__sidebar">
                   {/* Start Single Widget */}

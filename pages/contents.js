@@ -16,8 +16,6 @@ import ga from '../src/utils/ga';
 
 class Contents extends Component {
   componentDidMount() {
-    const { data } = this.props.content.toJS();
-    ga.view(`/${data.header.title}`);
     this.getContent();
   }
 
@@ -26,11 +24,16 @@ class Contents extends Component {
   }
 
   async getContent() {
-    let { v, preview } = this.props.router.query;
-    preview = (preview === 'aya_admin!');
-    if (v) {
-      await this.props.content.getContentByViewId(v, preview);
-    }
+    setTimeout(async () => {
+      let { v, preview } = this.props.router.query;
+      let vid = v;
+      preview = (preview === 'aya_admin!');
+      if (vid) {
+        await this.props.content.getContentByViewId(vid, preview);
+        const { data } = this.props.content.toJS();
+        ga.view(`/${data.header.title}`);
+      }
+    }, 100);
   }
 
   render() {
@@ -49,7 +52,7 @@ class Contents extends Component {
     return (
       <DefaultLayout onTop={ontop}>
         <NextHead>
-          <title>{data.header.title} | AYA Chinese</title>
+          <title>{data.title || 'เรียนภาษาจีนกับเหล่าซืออายะ'} | AYA Chinese</title>
         </NextHead>
         <Loader loading={loading} />
         {!loading && data.contents

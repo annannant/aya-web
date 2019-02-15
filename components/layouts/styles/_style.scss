@@ -880,6 +880,12 @@ Helper Class
     padding-top: 150px;
   }
   /* spacing */
+  .pb--10 {
+    padding-bottom: 10px;
+  }
+  .pb--20 {
+    padding-bottom: 20px;
+  }
   .pb--30 {
     padding-bottom: 30px;
   }
@@ -5700,7 +5706,7 @@ Navigation Styles
     color: #fff;
   }
   .portfolio {
-    margin-top: 30px;
+    margin-bottom: 30px;
     position: relative;
   }
   .portfolio .thumb {

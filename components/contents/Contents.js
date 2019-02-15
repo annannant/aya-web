@@ -39,15 +39,7 @@ export default class Contents extends Component {
         <NextHead>
           <link rel="stylesheet" href="/static/assets/css/plugins/quill.snow.css" />
         </NextHead>
-        <section className="wn__product__area brown--color  pb--30">
-          <div className="container">
-            <div className="row">
-              <div className={`col-md-12 col-sm-12 nopadding`}>
-                {contents}
-              </div>
-            </div>
-          </div>
-        </section>
+        {contents}
       </Fragment>
     )
   }

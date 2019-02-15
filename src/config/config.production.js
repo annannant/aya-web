@@ -8,11 +8,11 @@ module.exports = {
     token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiYXlhLXdlYiIsImZpcnN0bmFtZSI6ImNoaW5lc2UiLCJsYXN0bmFtZSI6Imxhbmd1ZWdlIHNjaG9vbCIsImV4cCI6MTU1ODY0OTMwNzU3Mn0.ckbG5l5-buhvsuypNBteYCeaQCFdDOE7AH0nOk_JGCY',
   },
   images: {
-    url: 'http://cms-api.ayachinese.com',
+    url: 'http://cdn.ayachinese.com',
     path: 'public/images/uploads',
   },
   files: {
-    url: 'http://cms-api.ayachinese.com',
+    url: 'http://cdn.ayachinese.com',
     path: 'public/files/uploads',
   },
   google: {
