@@ -1,5 +1,4 @@
 @import './styles/variables';
-
 .header__menu {
   left: 0;
   position: absolute;
@@ -20,5 +19,32 @@
     right: 0;
     top: 0px;
     z-index: 9; // display: flex;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 992px) {
+  .header__menuspace {
+    padding-bottom: 0px;
+  }
+  .header__menu {
+    position: relative;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+  .header__menuspace {
+    padding-bottom: 0px;
+  }
+  .header__menu {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__menuspace {
+    padding-bottom: 0px;
+  }
+  .header__menu {
+    position: relative;
   }
 }

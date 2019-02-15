@@ -1,5 +1,6 @@
 import { Component, Fragment } from 'react'
 import ContactHeader from './ContactHeader';
+import Link from 'next/link';
 
 export default class ContactPage extends Component {
   constructor() {
@@ -44,7 +45,11 @@ export default class ContactPage extends Component {
                       <i className="icon-phone icons" />
                       <div className="content">
                         <span>Phone Number:</span>
-                        <p>02-102-3593, 065-326-4945</p>
+                        <p>
+                          <Link href="tel://+6621023593">02-102-3593</Link>
+                          <br/>
+                          <Link href="tel://+66653264945">065-326-4945</Link>
+                        </p>
                       </div>
                     </div>
                     <div className="single__address">

@@ -10,6 +10,7 @@ class MainMenu extends Component {
   }
 
   render() {
+    const { page } = this.props;
     return (
       <div className={`row menu ${css.menu__box}`}>
         <div className="col-lg-10 d-none d-lg-block nopadding">
@@ -18,11 +19,11 @@ class MainMenu extends Component {
           </div>
           <nav className="mainmenu__nav">
             <ul className="meninmenu d-flex justify-content-start">
-              <li className="drop with--one--item"><Link href="/"><a><div>หน้าหลัก</div></a></Link></li>
-              <li className="drop with--one--item"><Link href="/courses"><a><div>คอร์สเรียนภาษาจีน</div></a></Link></li>
-              <li className="drop with--one--item"><Link href="/universities"><a><div>หลักสูตรเรียนต่อต่างประเทศ</div></a></Link></li>
-              <li className="drop with--one--item"><Link href="/reviews"><a><div>รีวิว</div></a></Link></li>
-              <li className="drop with--one--item"><Link href="/contacts"><a><div>ติดต่อเรา</div></a></Link></li>
+              <li className={`drop with--one--item`}><Link href="/"><a><div>หน้าหลัก</div></a></Link></li>
+              <li className={`drop with--one--item ${page === 'courses' ? 'active' : '' }`}><Link href="/courses"><a><div>คอร์สเรียนภาษาจีน</div></a></Link></li>
+              <li className={`drop with--one--item ${page === 'universities' ? 'active' : '' }`}><Link href="/universities"><a><div>หลักสูตรเรียนต่อต่างประเทศ</div></a></Link></li>
+              <li className={`drop with--one--item ${page === 'reviews' ? 'active' : '' }`}><Link href="/reviews"><a><div>รีวิว</div></a></Link></li>
+              <li className={`drop with--one--item ${page === 'contacts' ? 'active' : '' }`}><Link href="/contacts"><a><div>ติดต่อเรา</div></a></Link></li>
             </ul>
           </nav>
         </div>
@@ -50,14 +51,14 @@ class MainMenu extends Component {
             {/* <li className="ig" onClick={() => { window.open('https://www.instagram.com/ayachinese/') }}><a target="_blank" /></li> */}
             <li className="youtube" onClick={() => { window.open('https://www.youtube.com/channel/UCVky4PrbWWDyC4hrYwVN64w') }}><a target="_blank" /></li>
           </ul>
-          <div className={`d-none d-lg-block contact-tel ${css.tel}`}>
+          {/* <div className={`d-none d-lg-block contact-tel ${css.tel}`}>
             <Link href="tel://+6621023593">
               <a>
-                {/* <span className={css.icon}><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /></span> */}
+                <span className={css.icon}><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /></span>
                 <span className={css.number}>02 - 102 3593</span>
               </a>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     )

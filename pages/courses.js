@@ -18,7 +18,7 @@ class Courses extends Component {
     let { data, loading } = this.props.home.toJS();
     const main = data.main ? data.main : {};
     return (
-      <DefaultLayout onTop={main.ontop}>
+      <DefaultLayout page="courses" onTop={main.ontop}>
         <NextHead>
           <title>คอร์สเรียนภาษาจีน | AYA Chinese</title>
         </NextHead>

@@ -16,7 +16,7 @@ class Contacts extends Component {
 
   render() {
     return (
-      <DefaultLayout onTop={true}>
+      <DefaultLayout page="contacts" onTop={true}>
         <NextHead>
           <title>Contact AYA CHINESE., LTD. | AYA Chinese</title>
         </NextHead>

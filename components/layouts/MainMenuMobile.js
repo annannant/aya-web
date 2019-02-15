@@ -13,7 +13,7 @@ class MainMenuMobile extends Component {
     return (
       <div className={`row ${css.menu__mobile}`}>
         <div className={`col-sm-12 col-md-12 d-block d-lg-none nopadding ${css.sec__top}`}>
-          {/* <Link href="tel://+6621023593"><a><span className={css.number}>02 - 102 3593</span></a></Link> */}
+          <Link href="tel://+6621023593"><a><span className={css.number}>02 - 102 3593</span></a></Link>
         </div>
         <div className={`col-sm-12 col-md-12 d-block d-lg-none nopadding`}>
           <div className={`${css.rigth__items}`}> 

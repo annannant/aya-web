@@ -18,7 +18,7 @@ class Reviews extends Component {
     let { data, loading } = this.props.home.toJS();
     const main = data.main ? data.main : {};
     return (
-      <DefaultLayout onTop={main.ontop}>
+      <DefaultLayout page="reviews" onTop={main.ontop}>
         <NextHead>
           <title>รีวิว | AYA Chinese</title>
         </NextHead>

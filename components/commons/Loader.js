@@ -1,7 +1,4 @@
 import { Component, Fragment } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import Link from 'next/link'
 import css from './Loader.scss';
 
 export default class Loader extends Component {

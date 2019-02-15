@@ -2362,18 +2362,19 @@ Header Styles
   }
   .mainmenu__nav .meninmenu li a > div {
     padding: 1px 10px;
-    font-family: 'Mitr', sans-serif;
-    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
   }
 
   .mainmenu__nav .meninmenu li a:hover {
-    // color: $main-color;
-    // margin-bottom: 5px;
+    cursor: pointer;
   }
+  .mainmenu__nav .meninmenu li.active a > div {
+    border-bottom: 2px solid $main-color;
+  }
+
   .mainmenu__nav .meninmenu li a:hover > div {
-    border-bottom: 1px solid $main-color;
-    // -webkit-animation: 0.5s ease-in-out 0s normal both 1 running fadeInUp;
-    // animation: 0.5s ease-in-out 0s normal both 1 running fadeInUp;
+    border-bottom: 2px solid $main-color;
   }
 
   .is-sticky .mainmenu__nav .meninmenu li a {

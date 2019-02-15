@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import MainMenu from './MainMenu';
-import MainMenuMobile from './MainMenuMobile';
+// import MainMenuMobile from './MainMenuMobile';
+import MainMenuMobile from './MainMenuMobileV2';
 
 import css from './Header.scss';
 
@@ -16,10 +17,10 @@ class Header extends Component {
     };
     return (
       <header id="wn__header" className={`${className}`} >
-      <div className="container " >
-        <MainMenuMobile />
-        <MainMenu />
-      </div>
+        <div className="container " >
+          <MainMenuMobile page={this.props.page}/>
+          <MainMenu page={this.props.page} />
+        </div>
       </header >
     )
   }

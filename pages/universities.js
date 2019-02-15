@@ -18,11 +18,14 @@ class Universities extends Component {
     let { data, loading } = this.props.home.toJS();
     const main = data.main ? data.main : {};
     return (
-      <DefaultLayout onTop={main.ontop}>
+      <DefaultLayout page="universities" onTop={main.ontop}>
         <NextHead>
           <title>หลักสูตรเรียนต่อต่างประเทศ | AYA Chinese</title>
         </NextHead>
         <Loader loading={loading} />
+        {/* <div className="container">
+          <div className="entry-meta">หลักสูตรเรียนต่อต่างประเทศ</div>
+        </div> */}
         <ContentList list={data.contents} />
       </DefaultLayout>
     )
