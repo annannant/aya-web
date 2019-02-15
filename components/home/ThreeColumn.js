@@ -48,14 +48,16 @@ export default class ThreeColumn extends Component {
                   </div>
                 }
               </div>
-              <div className="content">
-                <LinkType type={item.link_type.value} to={item.link_to} >
-                  <h6>
-                    {item.title}
-                  </h6>
-                  <p>{item.desc}</p>
-                </LinkType>
-              </div>
+              {(item.title || item.desc) &&
+                <div className="content">
+                  <LinkType type={item.link_type.value} to={item.link_to} >
+                    <h6>
+                      {item.title}
+                    </h6>
+                    <p>{item.desc}</p>
+                  </LinkType>
+                </div>
+              }
             </div>
           </div>
         </Zoom>
