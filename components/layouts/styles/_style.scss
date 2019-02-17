@@ -2352,7 +2352,7 @@ Header Styles
   .mainmenu__nav .meninmenu li a {
     align-items: center;
     align-self: stretch;
-    color: #333;
+    color: #333333d6;
     display: flex;
     font-size: 15px;
     font-weight: 600;
@@ -2367,14 +2367,19 @@ Header Styles
   }
 
   .mainmenu__nav .meninmenu li a:hover {
+    color: #333;
     cursor: pointer;
   }
+
+  .mainmenu__nav .meninmenu li.active a {
+    color: #333;
+  }
   .mainmenu__nav .meninmenu li.active a > div {
-    border-bottom: 2px solid $main-color;
+    // border-bottom: 2px solid $main-color;
   }
 
   .mainmenu__nav .meninmenu li a:hover > div {
-    border-bottom: 2px solid $main-color;
+    // border-bottom: 2px solid $main-color;
   }
 
   .is-sticky .mainmenu__nav .meninmenu li a {
