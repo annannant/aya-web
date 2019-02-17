@@ -18,7 +18,7 @@ export default class BannerCarousel extends Component {
       margin: 0,
       nav: true,
       autoplay: true,
-      autoplayTimeout: 3000,
+      autoplayTimeout: 7000,
       items: 1,
       navText: ['<i class="zmdi zmdi-chevron-left"></i>', '<i class="zmdi zmdi-chevron-right"></i>'],
       dots: false,
