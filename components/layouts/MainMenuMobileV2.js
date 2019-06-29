@@ -42,7 +42,7 @@ class MainMenuMobile extends Component {
           <div className="row">
             <div className={`col-12 d-block d-lg-none ${css.mobile__icons}`}>
               <ul className="header__sidebar__right d-flex justify-content-center align-items-center">
-                <li className="fb" onClick={() => { window.open('https://www.facebook.com/AYA.TeachingChinese/') }}><a target="_blank" /></li>
+                <li className="fb" onClick={() => { window.open('https://www.facebook.com/AYA.Chinesee/') }}><a target="_blank" /></li>
                 <li className="line" onClick={() => { window.open('https://line.me/ti/p/@ayachinese') }}><a target="_blank" /></li>
                 <li className="youtube" onClick={() => { window.open('https://www.youtube.com/channel/UCVky4PrbWWDyC4hrYwVN64w') }}><a target="_blank" /></li>
               </ul>

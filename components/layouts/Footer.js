@@ -49,7 +49,7 @@ export default class Footer extends Component {
               <div className={`col-xs-4 col-md-4 text-center`}>
                 <ul className={`social__net social__net--2 d-flex ${style.social__net}`}>
                   <li>
-                    <Link href="https://www.facebook.com/AYA.TeachingChinese/">
+                    <Link href="https://www.facebook.com/AYA.Chinesee/">
                       <a target="_blank">
                         <img src="/static/assets/images/icons/facebook.png" alt="aya facebook" className={style.icon__social} />
                       </a>
