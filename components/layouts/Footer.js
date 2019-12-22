@@ -36,7 +36,7 @@ export default class Footer extends Component {
                 </div> */}
                 <div className={style.contact}>
                   <ul className={style.desc__list}>
-                    <li><FontAwesomeIcon icon="map-marker-alt" />บริษัท อายะ ไชนีส จำกัด ชั้น 16 อาคาร พญาไทพลาซ่า ติด BTS และ Airport Link พญาไท ทางออกที่ 1</li>
+                    <li><FontAwesomeIcon icon="map-marker-alt" />สถาบันสอนภาษาอายะไชนีส AYACHINESE CO., LTD. <br /> ตึก CP Tower 3 (พญาไท) อาคาร A ห้อง 10-1-1 ชั้น10 <br />แขวงทุ่งพญาไท เขตราชเทวี กทม.10400</li>
                     <li style={{ letterSpacing: 1.2 }}>
                       <Link href="tel://+6621023593"><a><FontAwesomeIcon icon="phone" className="fa-flip-horizontal" /> 02-102-3593</a></Link>,
                       <Link href="tel://+66653264945"><a> 065-326-4945</a></Link>

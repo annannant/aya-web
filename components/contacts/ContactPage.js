@@ -19,7 +19,7 @@ export default class ContactPage extends Component {
                 <div className="contact-form-wrap">
                   <h2 className="contact__title">แผนที่</h2>
                   <div className="google__map">
-                    <img alt="แผนที่ ayachinese" src="/static/assets/images/about/แผนที่-ayachinese.jpg" width="100%" />
+                    <img alt="แผนที่ ayachinese" src="/static/assets/images/about/แผนที่-ayachinese2.jpg" width="100%" />
                   </div>
                 </div>
                 <div className="form-output">
@@ -38,7 +38,7 @@ export default class ContactPage extends Component {
                       <i className="icon-location-pin icons" />
                       <div className="content">
                         <span>address:</span>
-                        <p>บริษัท อายะ ไชนีส ชั้น 16 อาคาร พญาไทพลาซ่า ติด BTS และ Airport Link พญาไท ทางออกที่ 1</p>
+                        <p>สถาบันสอนภาษาอายะไชนีส AYACHINESE CO., LTD. <br /> ตึก CP Tower 3 (พญาไท) อาคาร A ห้อง 10-1-1 ชั้น10 <br />แขวงทุ่งพญาไท เขตราชเทวี กทม.10400</p>
                       </div>
                     </div>
                     <div className="single__address">
